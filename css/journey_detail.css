@@ -1,0 +1,754 @@
+:root{
+    --maindeepColor: #101d36;
+    --mainColor: #114b9c;
+}
+/* 公共样式 */
+.intro-title{
+    font-size: 1.875rem;
+    font-weight: bolder;
+    font-style: italic;
+    margin: 0 0 0.8rem 0;
+}
+.intro-title i{
+    font-style: italic;
+    color: var(--mainColor);
+}
+
+/* 链接条区域 */
+.backHome{
+    color: var(--maindeepColor);
+}
+.backJourney{
+    color: var(--maindeepColor);
+}
+.currentLink{
+    color: var(--mainColor) !important;
+}
+
+/* 详情区域 */
+.detail-section{
+    width: 100%;
+    padding: 2rem 0;
+}
+.detail{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.detail-info{
+    width: 48%;
+}
+.detail-calendar{
+    width: 48%;
+    height: 60rem;
+}
+.detail-title h2{
+    font-size: 2rem;
+    color: var(--maindeepColor);
+}
+.detail-title p{
+    color: #666;
+    font-weight: 500;
+}
+.detail-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.detail-tags{
+    display: flex;
+    margin-top: 1.5rem;
+}
+.detail-tags .tag{
+    padding: .5rem 1rem;
+    color: var(--mainColor);
+    font-weight: bolder;
+    border: .25rem solid var(--mainColor);
+    margin-right: 1rem;
+}
+.detail-code{
+    font-size: 1.5rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.detail-price{
+    display: flex;
+    margin-top: 1.5rem;
+}
+.adult{
+    font-size: 1.4rem;
+    color: var(--maindeepColor);
+    font-weight: 500;
+}
+.adult span{
+    font-size: 1.4rem;
+    color: #e93f36;
+    font-weight: 500;
+}
+.adult span i{
+    font-size: 2rem;
+}
+.child{
+    font-size: 1.4rem;
+    color: var(--maindeepColor);
+    font-weight: 500;
+    margin-left: 1rem;
+}
+.child span{
+    font-size: 1.4rem;
+    color: #e93f36;
+    font-weight: 500;
+}
+.child span i{
+    font-size: 2rem;
+}
+.detail-img{
+    width: 100%;
+    margin-top: 1.5rem;
+    height: 34rem;
+}
+.detail-img img{
+    width: 100%;
+    height: 100%;
+}
+.detail-msg{
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+}
+.detail-star{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 3.5rem;
+    color: var(--maindeepColor);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background: #eef4fb;
+}
+.detail-star span{
+    font-size: 2.4rem;
+    color: var(--maindeepColor);
+    font-weight: var(--maindeepColor);
+}
+.detail-msg h4{
+    font-size: 1.5rem;
+    color: var(--maindeepColor);
+}
+.cityGo{
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+.cityGo span{
+    margin-left: 1.5rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.trip-days{
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+.trip-days span{
+    margin-left: 1.5rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.trip-outline{
+    display: flex;
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+.trip-outline .outline-items{
+    margin-left: 1.5rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.detail-order{
+    margin-top: 2rem;
+    width: 100%;
+    height: 5.75rem;
+    background: var(--mainColor);
+}
+.detail-order a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 5.75rem;
+    text-align: center;
+}
+
+/* 介绍区域 */
+.intro-section{
+    margin-top: 2.5rem;
+    width: 100%;
+    border-top: 2.375rem solid #f5f9fe;
+}
+.intro-nav-section{
+    width: 100%;
+}
+.intro-nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+}
+.intro-nav li a{
+    position: relative;
+    color: var(--maindeepColor);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.intro-nav li a.stik{
+    color: #fff;
+}
+.intro-nav li.current a{
+    color: var(--mainColor);
+}
+.intro-nav li.current a::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.625rem;
+    background-color: rgba(189, 205, 227, 0.8);
+  }
+
+/* 旅程简介区域 */
+.brief{
+    margin-bottom: 2rem;
+}
+.brief-con p{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: var(--maindeepColor);
+    line-height: 2.5rem;
+}
+
+/* 简途旅程区域 */
+.simple{
+    margin-bottom: 2rem;
+}
+.simple-table{
+    width: 100%;
+    border-collapse:collapse;
+}
+.simple-table thead{
+    height: 3.125rem;
+    background-color: #f5f9fe;
+}
+.simple-table thead th{
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 2.25rem;
+    color: var(--mainColor);
+}
+.simple-table tbody td{
+    padding: 2.1875rem 2.25rem;
+    border: 1px solid #ccc;
+}
+.simple-table tbody td span{
+    font-size: 1.25rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.simple-table tbody td p{
+    margin: .5rem 0;
+    font-size: 1.125rem;
+    font-weight: bolder;
+}
+.simple-table tbody tr:nth-child(1) td{
+    border-top: 0;
+}
+
+/* 重点推荐区域 */
+.recomend{
+    margin-bottom: 2rem;
+}
+.recomend-item{
+    display: flex;
+    margin: 1rem 0;
+}
+.recomend-img{
+    width: 15%;
+}
+.recomend-img img{
+    width: 100%;
+    height: 100%;
+}
+.recomend-info{
+    padding-top: 4rem;
+    width: 62.5rem;
+    padding-right: 2.5rem;
+    margin-left: 2.5rem;
+}
+.recomend-info h4{
+    font-size: 1.5rem;
+    color: var(--maindeepColor);
+}
+.recomend-info p{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+/* 详细行程区域 */
+.trip{
+    margin-bottom: 2rem;
+}
+.trip-title p{
+    font-weight: 400;
+    font-size: 1rem;
+    color: #666;
+    font-style: normal;
+}
+.trip-con{
+    margin-top: 2rem;
+    color: var(--maindeepColor);
+}
+.trip-con h3{
+    font-size: 1.5rem;
+}
+.trip-con h4{
+    font-size: 1.375rem;
+    margin-top: 1rem;
+}
+.trip-con p{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.day-hd{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 100%;
+    height: 6rem;
+    background-color: #f5f9fe;
+}
+.day-hd h3{
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.day-hd h3 i{
+    margin-right: 2rem;
+}
+.day-hd span{
+    color: #666;
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+.day-location{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 4.5rem;
+    background: #e7edf4;
+    margin-left: 5%;
+    color: var(--mainColor);
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
+.trip-con-day2{
+    margin-top: 2rem;
+}
+.yazhuangImgs{
+    margin: 2rem 0;
+}
+.yazhuangImgs img{
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+.golocation{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.golocation span{
+    color: var(--mainColor);
+}
+
+/* 费用说明区域 */
+.cost{
+    margin-bottom: 2rem;
+}
+.cost-con{
+    font-weight: bolder;
+}
+.cost-con h5{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.cost-con p{
+    font-size: 1.3rem;
+}
+
+/* 优惠政策区域 */
+.favouredPolicy{
+    margin-bottom: 1rem;
+}
+.favouredPolicy-con{
+    font-weight: bolder;
+    margin-top: 2rem;
+}
+.favouredPolicy-con p{
+    font-size: 1.3rem;
+}
+
+/* 取消政策 */
+.cancelPolicy{
+    margin-bottom: 2rem;
+}
+.cancelPolicy-con{
+    font-weight: bolder;
+    margin-top: 2rem;
+}
+.cancelPolicy-con h5{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.cancelPolicy-con p{
+    font-size: 1.3rem;
+}
+
+/* 用户点评区域 */
+.comment{
+    margin-top: 2.5rem;
+    width: 100%;
+    border-top: 2.375rem solid #f5f9fe;
+    padding-top: 3rem;
+}
+.comment-hd{
+    display: flex;
+    justify-content: space-between;
+}
+.comment-hd h3{
+    font-size: 1.875rem;
+}
+.comment-hd a{
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: bolder;
+}
+.comment-bd{
+    margin-top: 2rem;
+}
+.comment-item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    border-bottom: .0625rem solid #ccc;
+}
+.comment-left{
+    width: 12%;
+    display: flex;
+    height: 6.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.comment-name{
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: var(--maindeepColor);
+}
+.comment-attr{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.comment-attr img{
+    width: 100%;
+    height: 100%;
+}
+.comment-right{
+    width: 87%;
+    font-weight: bolder;
+    color: var(--maindeepColor);
+}
+.comment-time{
+    font-size: 1.5rem;
+}
+.comment-con{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.comment-imgs img{
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+@media screen and (max-width:1200px){
+    .wrap{
+        width: 100%;
+    }
+}
+@media screen and (max-width:700px){
+    .recomend-img{
+        width: 20%;
+    }
+    .recomend-info{
+        padding-top: 1rem;
+        width: 78%;
+    }
+    .yazhuangImgs{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .yazhuangImgs img{
+        margin-top: 2rem;
+    }
+    .yazhuangImgs img:nth-child(2n){
+        margin-right: 0;
+    }
+    .comment-left{
+        justify-content: center;
+        width: 20%;
+    }
+    .comment-name{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1; 
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+    }
+    .comment-right{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .detail-info{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:991px){
+    .linksbar-section{
+        padding: 1rem;
+    }
+    .detail-section{
+        padding: 3rem 1rem;
+    }
+    .brief{
+        padding: 0 1rem;
+    }
+    .simple{
+        padding: 0 1rem;
+    }
+    .recomend{
+        padding: 0 1rem;
+    }
+    .trip{
+        padding: 0 1rem;
+    }
+    .cost{
+        padding: 0 1rem;
+    }
+    .favouredPolicy{
+        padding: 0 1rem;
+    }
+    .cancelPolicy{
+        padding: 0 1rem;
+    }
+    .comment{
+        padding: 0 1rem;
+    }
+}
+
+
+.detail-calendar{
+    border: 1px solid #ccc;
+    padding: 2rem;
+}
+
+/*设置整个页面的显示样式*/
+.calendar{
+    width: 100%;
+    height: 350px;
+    background: white;
+}
+/*标题的显示样式*/
+.calendar-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     position: relative;
+     width: 100%;
+     height: 7rem;
+     font-size: 1.875rem;
+     color: var(--maindeepColor);
+     text-align: center;
+     font-weight: bolder;
+     background: #f5f9fe;
+}
+.calendar-time{
+    display: flex;
+    font-size: 1.4rem;
+    margin: 0 3rem;
+}  
+#pre span{
+    font-size: 2.5rem;
+    color: var(--maindeepColor);
+}
+#next span{
+    font-size: 2.5rem;
+    color: var(--maindeepColor);
+}
+
+.body-list ul{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.body-list ul li{
+    list-style: none;
+    display: block;
+    width: 10%;
+    margin: 0.4rem 1rem;
+    float: left;
+    height: 36px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.weekdark{
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+#days li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 6.25rem;
+    background: #f5f9fe;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+}
+#days li i{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+/*设置已经过去的日期颜色*/
+.lightgrey{
+    color:#a8a8a8;
+}
+/*设置将来的日期颜色*/
+.darkgrey{
+    color:var(--maindeepColor);
+}
+/*日期当天用绿色背景绿色文字加以显示*/
+.greenbox{
+    background: var(--mainColor) !important;
+    color: #fff;
+}
+
+
+@media screen and (max-width:1080px){
+    .body-list ul li{
+        margin: 0.4rem 0.8rem;
+    }
+}
+@media screen and (max-width:850px){
+    .detail-calendar{
+        width: 100%;
+    }
+    .body-list ul li{
+        width: 12%;
+    }
+}
+@media screen and (max-width:690px){
+    .body-list ul li{
+        width: 10%;
+        margin: 0.4rem 1rem;
+    }
+    .bigImg{
+        width: 70% !important;
+        height: 40% !important;
+    }
+}
+
+.bigImg{
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 70%;
+}
+.bigImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.closeImg{
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+    top: 5rem;
+    right: 5rem;
+}
+.closeImg span{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.Bigmask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width:400px){
+    .yazhuangImgs{
+        justify-content: center;
+    }
+    .yazhuangImgs img{
+        width: 90%;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width:381px){
+    .detail-calendar{
+        padding: 0.5rem;
+    }
+    .body-list ul li{
+        width: 11%;
+        margin: 0.4rem 0.6rem;
+    }
+    #days li{
+        width: 11%;
+    }    
+}

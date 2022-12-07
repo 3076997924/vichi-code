@@ -1,0 +1,35 @@
+:root{
+    --maindeepColor: #101d36;
+    --mainColor: #114b9c;
+}
+.banner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.intro-section{
+    width: 100%;
+    padding: 2rem 0;
+}
+.intro-title{
+    font-size: 1.5rem;
+}
+.intro-con p{
+    font-size: 1.3rem;
+    color: var(--maindeepColor);
+    font-weight: 500;
+    line-height: 3rem;
+}
+.intro-con img{
+    margin: 1rem 0;
+    width: 100%;
+}
+
+/* 媒体查询 */
+@media screen and (max-width:1200px){
+    .banner{
+        width: 100%;
+    }
+    .intro-section{
+        padding: 2rem 1rem;
+    }
+}

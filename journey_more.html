@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vichi-旅程更多</title>
+    <!-- 引入初始化样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入相同样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/journey_search.css">
+    <!-- 引入 字体图标  iconfont -->
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_3788509_bx5rjehcoih.css?spm=a313x.7781069.1998910419.53&file=font_3788509_bx5rjehcoih.css">
+</head>
+
+<body>
+        <!-- 头部 header section  -->
+        <header class="header-section">
+            <div class="header-bar-section">
+                <div class="login">
+                    <div class="login-icon">
+                        <img src="./images/icon-login.png" alt="">
+                    </div>
+                    <p>
+                        您好，请先 <a href="javascript:;">登陆</a> | <a href="javascript:;">注册</a>
+                    </p>
+                </div>
+                <ul class="header-bar">
+                    <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                    <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                    <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                    <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                </ul>
+            </div>
+            <div class="header-bd-section">
+                <div class="logo">
+                    <h1>
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                    </h1>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html"><span>首页</span></a></li>
+                        <li class="current"><a href="./journey.html"><span>旅程</span></a></li>
+                        <li><a href="javascript:;"><span>酒店</span></a></li>
+                        <li><a href="javascript:;"><span>机票</span></a></li>
+                        <li><a href="javascript:;"><span>定制路线</span></a></li>
+                        <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                        <li><a href="javascript:;"><span>会员中心</span></a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile-links">
+                    <div class="mobile-btns">
+                        <div class="mobile-wrap">
+                            <div class="mobile-title">
+                                我的账号
+                                <span class="iconfont icon-sort" id="closeMobile"></span>
+                            </div>
+                            <div class="login-mobile">
+                                <a href="">登陆</a>
+                            </div>
+                            <div class="register-mobile">
+                                <a href="">注册</a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav-mobile">
+                        <div class="mobile-wrap">
+                            <li class="current"><a href="index.html"><span>首页</span></a></li>
+                            <li><a href="./journey.html"><span>旅程</span></a></li>
+                            <li><a href="javascript:;"><span>酒店</span></a></li>
+                            <li><a href="javascript:;"><span>机票</span></a></li>
+                            <li><a href="javascript:;"><span>定制路线</span></a></li>
+                            <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                            <li><a href="javascript:;"><span>会员中心</span></a></li>
+                        </div>
+                    </ul>
+                    <div class="other-links-mobile">
+                        <div class="mobile-wrap">
+                            <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                            <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                            <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                            <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                        </div>
+                    </div>
+                </nav>
+                <div class="nav-mobile-btn">
+                    <span class="iconfont icon-sort" id="openMobile"></span>
+                </div>
+                <div class="compare">
+                    <img src="./images/PK.png" alt="" class="pk">
+                    <img src="./images/compare.png" alt="" class="com-img">
+                </div>
+            </div>
+        </header>
+
+    <!-- 关键词区域 -->
+    <section class="keywords-section">
+        <div class="wrap">
+            <div class="keywords-title">
+                <h4>根据关键字"<span>芽庄</span>"搜索相关内容:</h4>
+            </div>
+            <div class="keywords-theme">
+                <span class="theme-title">出题旅程:</span>
+                <i class="current">不限</i>
+                <i>全景游</i>
+                <i>北越游</i>
+                <i>南越游</i>
+                <i>中部游</i>
+                <i>中南半岛游</i>
+                <i>边境游</i>
+                <i>体验游</i>
+                <i>高端度假游</i>
+            </div>
+            <div class="keywords-city">
+                <span class="city-title">出发城市:</span>
+                <i class="current">不限</i>
+                <i>岘港</i>
+                <i>芽庄</i>
+                <i>河内</i>
+                <i>会安</i>
+                <i>大叻</i>
+                <i>美奈</i>
+                <i>头顿</i>
+                <i>潘切</i>
+            </div>
+            <div class="keywords-price">
+                <span class="price-title">价格:</span>
+                <i class="current">不限</i>
+                <i>2500以下</i>
+                <i>3000-4000</i>
+                <i>4000-5000</i>
+                <i>5000-6000</i>
+                <i>6000-7000</i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 内容区域 -->
+    <section class="content-section">
+        <div class="wrap">
+            <!-- 条目区域 -->
+            <div class="content-items">
+                <div class="content-item">
+                    <a href="./journey_detail.html">
+                        <div class="content-img">
+                            <img src="./images/con_item1.jpg" alt="">
+                            <div class="item-bar">
+                                自由行
+                            </div>
+                        </div>
+                        <div class="content-msg">
+                            <h4>越南芽庄6日5晚自由行</h4>
+                            <p>市区海滨商圈4晚连住【庄点春意·与大海对话】畅游无边泳池|19元惠购网红哈瓦那skylight海景下午茶·足不出户可赏大海美景『下一步可选机场快速通关+奥戴小姐姐服务』继续你的仲夏梦！
+                            </p>
+                            <div class="content-msg-tag">
+                                <div class="tag">攻略完备</div>
+                                <div class="tag">度假村酒店</div>
+                                <div class="tag">双酒店</div>
+                            </div>
+                            <div class="content-msg-price">
+                                <span>¥<i>3654</i></span>起
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content-msg-btn">
+                        <a href="./journey_reserve.html">立即预订</a>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <a href="./journey_detail.html">
+                        <div class="content-img">
+                            <img src="./images/con_item2.jpg" alt="">
+                            <div class="item-bar">
+                                广州出发
+                            </div>
+                        </div>
+                        <div class="content-msg">
+                            <h4>越南胡志明市+大叻+芽庄7日6晚自由行</h4>
+                            <p>『5晚连住+市区包车1日游』“19元惠购”网红哈瓦那顶楼skylight海景下午茶·市区酒店/海滩酒店/珍珠岛酒店任你选·热销！</p>
+                            <div class="content-msg-tag">
+                                <div class="tag">赠取消险</div>
+                                <div class="tag">成团保障</div>
+                                <div class="tag">海鲜餐</div>
+                            </div>
+                            <div class="content-msg-price">
+                                <span>¥<i>4000</i></span>起
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content-msg-btn">
+                        <a href="./journey_reserve.html">立即预订</a>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <a href="./journey_detail.html">
+                        <div class="content-img">
+                            <img src="./images/con_item3.jpg" alt="">
+                            <div class="item-bar">
+                                跟团游
+                            </div>
+                        </div>
+                        <div class="content-msg">
+                            <h4>越南河内+芽庄+胡志明市自由行</h4>
+                            <p>2晚升级珍珠度假村</p>
+                            <div class="content-msg-tag">
+                                <div class="tag">上门接送</div>
+                                <div class="tag">度假村酒店</div>
+                                <div class="tag">游乐园</div>
+                            </div>
+                            <div class="content-msg-price">
+                                <span>¥<i>3000</i></span>起
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content-msg-btn">
+                        <a href="./journey_reserve.html">立即预订</a>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <a href="./journey_detail.html">
+                        <div class="content-img">
+                            <img src="./images/con_item4.jpg" alt="">
+                            <div class="item-bar">
+                                私家团
+                            </div>
+                        </div>
+                        <div class="content-msg">
+                            <h4>芽庄珍珠岛游乐园一日游</h4>
+                            <p>全程蜜享珍珠度假村【和亲爱的·热爱的TA一起看世界】答应我一定要去珍珠岛【不去遗憾】独占一座岛的乐园！跨海缆车！嗨翻这个蜜里加甜的时光！订含门票和三餐的房型可以无限次入园</p>
+                            <div class="content-msg-tag">
+                                <div class="tag">管家服务</div>
+                                <div class="tag">当地特色美食</div>
+                                <div class="tag">观日落</div>
+                            </div>
+                            <div class="content-msg-price">
+                                <span>¥<i>2000</i></span>起
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content-msg-btn">
+                        <a href="./journey_reserve.html">立即预定</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分页器区域 -->
+            <div class="pagenation">
+                <!-- <div class="prev pagebtn">上一页</div>
+                <div class="page pagebtn current">1</div>
+                <div class="page pagebtn">2</div>
+                <div class="page pagebtn">3</div>
+                <div class="page pagebtn">4</div>
+                <div class="page pagebtn">5</div>
+                <div class="page pagebtn">6</div>
+                <div class="ellaspe">
+                    ···
+                </div>
+                <div class="page pagebtn">40</div>
+                <div class="next pagebtn">下一页</div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 底部区域 -->
+    <footer class="footer-section">
+        <div class="footer-hd">
+            <div class="banner">
+                <ul class="ft-nav">
+                    <li><a href="./journey.html">旅程</a></li>
+                    <li><a href="javascript:;">酒店</a></li>
+                    <li><a href="javascript:;">机票</a></li>
+                    <li><a href="javascript:;">定制路线</a></li>
+                    <li><a href="javascript:;">游记攻略</a></li>
+                    <li><a href="javascript:;">会员中心</a></li>
+                </ul>
+                <div class="ft-top">
+                    返回顶部
+                    <img src="./images/icon_back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bd">
+            <div class="banner">
+                <div class="footer-msg">
+                    <div class="footer-msg-left">
+                        <div class="footer-msg-notice">
+                            金莲国旅: <br>
+                            对于中国游客而言，以及对于越来越多的世界各地的游客而言， 携程是其可值得信赖的旅行平台，用户可以通过携程的平台进行任何类型的旅行预订，包括从目的地内活动、周末短假及短途旅行，到跨境..
+                        </div>
+                        <div class="footer-msg-contact">
+                            联系我们: <br>
+                            <p>服务热线：020-226231</p>
+                            <p>合作热线：020-115423</p>
+                            <p>联系邮箱：21542512@qq.com</p>
+                            <p>公司地址：广东省广州市天河区龙洞森林公园环山路</p>
+                        </div>
+                    </div>
+                    <div class="footer-msg-right">
+                        <div class="erweicode">
+                            <div class="wechat">
+                                <p>—— 微信客服 ——</p>
+                                <img src="./images/erweicode1.png" alt="">
+                            </div>
+                            <div class="official">
+                                <p>—— 公众号 ——</p>
+                                <img src="./images/erweicode2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobile">咨询电话: <span>020-123456</span> 或 <span>020-326531</span></div>
+                    </div>
+                </div>
+                <ul class="footer-platform">
+                    <li>腾讯开放平台</li>
+                    <li>全球速卖通</li>
+                    <li>腾讯微云</li>
+                    <li>腾讯会议</li>
+                    <li>阿里云计算</li>
+                    <li>腾讯优图</li>
+                    <li>大麦网</li>
+                    <li>腾讯文档</li>
+                    <li>阿里巴巴集团</li>
+                    <li>腾讯企点</li>
+                    <li>网商银行</li>
+                    <li>阿里妈妈</li>
+                    <li>阿里通信</li>
+                    <li>阿里影业</li>
+                    <li>阿里健康</li>
+                    <li>阿里安全</li>
+                </ul>
+                <div class="footer-record">
+                    浙ICP备2012000356号-3
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- 引入jquery js -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- 引入公共 js -->
+    <script src="./js/common.js"></script>
+    <script src="./js/pagenation.js"></script>
+    <!-- 引入journey_search js -->
+    <script src="./js/journey_search.js"></script>
+</body>
+
+</html>

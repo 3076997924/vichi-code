@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vichi</title>
+    <!-- 引入 reset初始化 css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入 common 公共 css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入 index 首页 css -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入 aos css -->
+    <link rel="stylesheet" href="./css/aos.css">
+    <!-- 引入 字体图标  iconfont -->
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_3788509_bx5rjehcoih.css?spm=a313x.7781069.1998910419.53&file=font_3788509_bx5rjehcoih.css">
+    <!-- 引入 轮播图 swiper -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #114b9c !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 2.25rem;
+            height: .75rem;
+            border-radius: 0;
+            opacity: 1;
+            background: #fff;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: 3.75rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 header section  -->
+    <header class="header-section">
+        <div class="header-bar-section">
+            <div class="login">
+                <div class="login-icon">
+                    <img src="./images/icon-login.png" alt="">
+                </div>
+                <p>
+                    您好，请先 <a href="javascript:;">登陆</a> | <a href="javascript:;">注册</a>
+                </p>
+            </div>
+            <ul class="header-bar">
+                <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+            </ul>
+        </div>
+        <div class="header-bd-section">
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li class="current"><a href="index.html"><span>首页</span></a></li>
+                    <li><a href="./journey.html"><span>旅程</span></a></li>
+                    <li><a href="javascript:;"><span>酒店</span></a></li>
+                    <li><a href="javascript:;"><span>机票</span></a></li>
+                    <li><a href="javascript:;"><span>定制路线</span></a></li>
+                    <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                    <li><a href="javascript:;"><span>会员中心</span></a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-links">
+                <div class="mobile-btns">
+                    <div class="mobile-wrap">
+                        <div class="mobile-title">
+                            我的账号
+                            <span class="iconfont icon-sort" id="closeMobile"></span>
+                        </div>
+                        <div class="login-mobile">
+                            <a href="">登陆</a>
+                        </div>
+                        <div class="register-mobile">
+                            <a href="">注册</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-mobile">
+                    <div class="mobile-wrap">
+                        <li class="current"><a href="index.html"><span>首页</span></a></li>
+                        <li><a href="./journey.html"><span>旅程</span></a></li>
+                        <li><a href="javascript:;"><span>酒店</span></a></li>
+                        <li><a href="javascript:;"><span>机票</span></a></li>
+                        <li><a href="javascript:;"><span>定制路线</span></a></li>
+                        <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                        <li><a href="javascript:;"><span>会员中心</span></a></li>
+                    </div>
+                </ul>
+                <div class="other-links-mobile">
+                    <div class="mobile-wrap">
+                        <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-mobile-btn">
+                <span class="iconfont icon-sort" id="openMobile"></span>
+            </div>
+            <div class="compare">
+                <img src="./images/PK.png" alt="" class="pk">
+                <img src="./images/compare.png" alt="" class="com-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- 轮播图 swiper section -->
+    <section class="swiper-section">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/swipper1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner5.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- 热门路线 hot section-->
+    <section class="hot-section">
+        <div class="banner">
+            <div class="hot">
+                <div class="hot-title">
+
+                </div>
+                <div class="hot-con">
+                    <div class="hot-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="hot_img">
+                            <img src="./images/hot1.jpg" alt="">
+                        </div>
+                        <div class="hot_msg">
+                            <h4>越南胡志明市+大叻+芽庄8日7晚自由行</h4>
+                            <p>含大小外圈3日包车服务，中文司机，畅玩吴哥窟。当地老司机轻松带您玩转吴哥窟...</p>
+                        </div>
+                    </div>
+                    <div class="hot-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="hot_img">
+                            <img src="./images/hot2.jpg" alt="">
+                        </div>
+                        <div class="hot_msg">
+                            <h4>越南富国岛6日4晚自由行</h4>
+                            <p>广州直飞暹粒机票,先到先得！！！在下一步附加资源中有有多种包车资源可供选择。...</p>
+                        </div>
+                    </div>
+                    <div class="hot-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="hot_img">
+                            <img src="./images/hot3.jpg" alt="">
+                        </div>
+                        <div class="hot_msg">
+                            <h4>柬埔寨暹粒吴哥窟+金边4晚或5晚6日自由行</h4>
+                            <p>4晚暹粒+2晚金边不走回头路，畅玩双城。在下一步附加资源中有有多种包车资源可供选择。...</p>
+                        </div>
+                    </div>
+                    <div class="hot-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="hot_img">
+                            <img src="./images/hot4.jpg" alt="">
+                        </div>
+                        <div class="hot_msg">
+                            <h4>柬埔寨暹粒+金边+西哈努克省3-15日自由行</h4>
+                            <p>高评酒店任选，6晚连住，轻松玩遍吴哥窟。</p>
+                        </div>
+                    </div>
+                    <div class="hot-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="hot_img">
+                            <img src="./images/hot5.jpg" alt="">
+                        </div>
+                        <div class="hot_msg">
+                            <h4>越南+柬埔寨8日7晚自由行</h4>
+                            <p>精短小假期，周末亲子游，精选网红林纳雅度假水疗！</p>
+                        </div>
+                    </div>
+                    <div class="hot-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="hot_img">
+                            <img src="./images/hot6.jpg" alt="">
+                        </div>
+                        <div class="hot_msg">
+                            <h4>柬埔寨暹粒+西哈努克省7日6晚自由行</h4>
+                            <p>各档酒店、多种房型由您来挑，出发前即可搞定当地住宿。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 定制路线 customized section -->
+    <section class="customized-section">
+        <div class="banner">
+            <div class="customized">
+                <div class="customized-title">
+                </div>
+                <div class="customized-con">
+                    <div class="customized-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="customized-img">
+                            <img src="./images/cusomized_icon1.png" alt="">
+                        </div>
+                        <div class="customized-msg">
+                            <h4>提交订单</h4>
+                            <p>输入您的定制信息</p>
+                        </div>
+                        <div class="customized-sort">
+                            <img src="./images/customized_01.png" alt="">
+                        </div>
+                        <div class="customized-circle customized-circle-right">
+                        </div>
+                    </div>
+                    <div class="customized-item" data-aos="zoom-in-down" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="customized-img">
+                            <img src="./images/customize_icon2.png" alt="">
+                        </div>
+                        <div class="customized-msg">
+                            <h4>专人沟通</h4>
+                            <p>分配定制师</p>
+                        </div>
+                        <div class="customized-sort">
+                            <img src="./images/customized_02.png" alt="">
+                        </div>
+                        <div class="customized-circle customized-circle-left">
+                        </div>
+                        <div class="customized-circle customized-circle-right">
+                        </div>
+                    </div>
+                    <div class="customized-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="customized-img">
+                            <img src="./images/customized_icon3.png" alt="">
+                        </div>
+                        <div class="customized-msg">
+                            <h4>制作方案</h4>
+                            <p>根据情况调整细节</p>
+                        </div>
+                        <div class="customized-sort">
+                            <img src="./images/customized_03.png" alt="">
+                        </div>
+                        <div class="customized-circle customized-circle-left">
+                        </div>
+                        <div class="customized-circle customized-circle-right">
+                        </div>
+                    </div>
+                    <div class="customized-item" data-aos="zoom-in-down" data-aos-delay="60" data-aos-duration="1000">
+                        <div class="customized-img">
+                            <img src="./images/customized_icon4.png" alt="">
+                        </div>
+                        <div class="customized-msg">
+                            <h4>确认方案</h4>
+                            <p>开启愉快旅程</p>
+                        </div>
+                        <div class="customized-sort">
+                            <img src="./images/customized_04.png" alt="">
+                        </div>
+                        <div class="customized-circle customized-circle-left">
+                        </div>
+                    </div>
+                    <div class="customized-dashed">
+
+                    </div>
+
+                </div>
+                <div class="customized-more">
+                    前往定制属于你的那旅程方案吧~
+                    <span class="iconfont icon-youjiantou"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 酒店推荐 hotel section -->
+    <section class="hotel-section">
+        <div class="banner">
+            <div class="hotel">
+                <div class="hotel-title">
+                </div>
+                <div class="hotel-con">
+                    <div class="hotel_item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <img src="./images/hotel1.jpg" alt="">
+                        <div class="hotel-mask"></div>
+                        <div class="hotel-msg">
+                            <h4>桑树系列玛瑞娜丝绸</h4>
+                            <p><span class="iconfont icon-yanjing"></span>浏览人数：999+</p>
+                        </div>
+                    </div>
+                    <div class="hotel_item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <img src="./images/hotel2.jpg" alt="">
+                        <div class="hotel-mask"></div>
+                        <div class="hotel-msg">
+                            <h4>罗曼纳度假水疗酒店</h4>
+                            <p><span class="iconfont icon-yanjing"></span>浏览人数：780</p>
+                        </div>
+                    </div>
+                    <div class="hotel_item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <img src="./images/hotel3.jpg" alt="">
+                        <div class="hotel-mask"></div>
+                        <div class="hotel-msg">
+                            <h4>棕榈花园海滩水疗度假酒店</h4>
+                            <p><span class="iconfont icon-yanjing"></span>浏览人数：10780</p>
+                        </div>
+                    </div>
+                    <div class="hotel_item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <img src="./images/hotel4.jpg" alt="">
+                        <div class="hotel-mask"></div>
+                        <div class="hotel-msg">
+                            <h4>美奈帆船俱乐部度假村</h4>
+                            <p><span class="iconfont icon-yanjing"></span>浏览人数：999+</p>
+                        </div>
+                    </div>
+                    <div class="hotel_item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <img src="./images/hotel5.jpg" alt="">
+                        <div class="hotel-mask"></div>
+                        <div class="hotel-msg">
+                            <h4>西贡达拉特酒店</h4>
+                            <p><span class="iconfont icon-yanjing"></span>浏览人数：620</p>
+                        </div>
+                    </div>
+                    <div class="hotel_item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <img src="./images/hotel6.jpg" alt="">
+                        <div class="hotel-mask"></div>
+                        <div class="hotel-msg">
+                            <h4>富国岛翡翠湾JW万豪度假酒店</h4>
+                            <p><span class="iconfont icon-yanjing"></span>浏览人数：240</p>
+                        </div>
+                    </div>
+                    <div class="hotel_item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <img src="./images/hotel7.jpg" alt="">
+                        <div class="hotel-mask"></div>
+                        <div class="hotel-msg">
+                            <h4>富国岛贝壳Spa度假酒店</h4>
+                            <p><span class="iconfont icon-yanjing"></span>浏览人数：360</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游记攻略 strategy section-->
+    <section class="strategy-section">
+        <div class="banner">
+            <div class="strategy">
+                <div class="strategy-title">
+                </div>
+                <div class="strategy-con">
+                    <div class="strategy-item strategy-item1" data-aos="zoom-in-up" data-aos-delay="60"
+                        data-aos-duration="1000">
+                        <img src="./images/strategy1.jpg" alt="">
+                        <div class="strategy-mask"></div>
+                        <div class="strategy-msg">
+                            <h4>越南你好！第一次去越南，应..</h4>
+                            <p>作为曾经的法国殖民地，殖民文化在这里随处可见——咖啡和法棍面包与越南人的生活紧密相关..</p>
+                            <p><span class="iconfont icon-yanjing"></span>阅读人数：1124580</p>
+                        </div>
+                    </div>
+                    <div class="strategy-items">
+                        <div class="strategy-item strategy-item2" data-aos="zoom-in-up" data-aos-delay="60"
+                            data-aos-duration="1000">
+                            <img src="./images/strategy2.jpg" alt="">
+                            <div class="strategy-mask"></div>
+                            <div class="strategy-msg">
+                                <h4>玩遍这些才算来过芽庄！只要2-3天时间！</h4>
+                                <p>芽庄的海岸绵长，沙滩细软，周边的小岛是游船、潜水的好去处...</p>
+                                <p><span class="iconfont icon-yanjing"></span>阅读人数：120450</p>
+                            </div>
+                        </div>
+                        <div class="strategy-item strategy-item3" data-aos="zoom-in-up" data-aos-delay="60"
+                            data-aos-duration="1000">
+                            <img src="./images/strategy3.jpg" alt="">
+                            <div class="strategy-mask"></div>
+                            <div class="strategy-msg">
+                                <h4>越南你好！第一次去越南，应..</h4>
+                                <p>作为曾经的法国殖民地，殖民文化在这里随处可见——咖啡和法棍面包与越南人的生活紧密相关..</p>
+                                <p><span class="iconfont icon-yanjing"></span>阅读人数：615210</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strategy-item strategy-item4" data-aos="zoom-in-up" data-aos-delay="60"
+                        data-aos-duration="1000">
+                        <img src="./images/strategy4.jpg" alt="">
+                        <div class="strategy-mask"></div>
+                        <div class="strategy-msg">
+                            <h4>去岘港，你必须要知道的那些事...</h4>
+                            <p>岘港是越南第三大城市，越南最大的海滨城市，这里社会治安良好，人民幸福指数为亚洲第一。作为人生...</p>
+                            <p><span class="iconfont icon-yanjing"></span>阅读人数：43210</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer class="footer-section">
+        <div class="footer-hd">
+            <div class="banner">
+                <ul class="ft-nav">
+                    <li><a href="./journey.html">旅程</a></li>
+                    <li><a href="javascript:;">酒店</a></li>
+                    <li><a href="javascript:;">机票</a></li>
+                    <li><a href="javascript:;">定制路线</a></li>
+                    <li><a href="javascript:;">游记攻略</a></li>
+                    <li><a href="javascript:;">会员中心</a></li>
+                </ul>
+                <div class="ft-top">
+                    返回顶部
+                    <img src="./images/icon_back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bd">
+            <div class="banner">
+                <div class="footer-msg">
+                    <div class="footer-msg-left">
+                        <div class="footer-msg-notice">
+                            金莲国旅: <br>
+                            对于中国游客而言，以及对于越来越多的世界各地的游客而言， 携程是其可值得信赖的旅行平台，用户可以通过携程的平台进行任何类型的旅行预订，包括从目的地内活动、周末短假及短途旅行，到跨境..
+                        </div>
+                        <div class="footer-msg-contact">
+                            联系我们: <br>
+                            <p>服务热线：020-226231</p>
+                            <p>合作热线：020-115423</p>
+                            <p>联系邮箱：21542512@qq.com</p>
+                            <p>公司地址：广东省广州市天河区龙洞森林公园环山路</p>
+                        </div>
+                    </div>
+                    <div class="footer-msg-right">
+                        <div class="erweicode">
+                            <div class="wechat">
+                                <p>—— 微信客服 ——</p>
+                                <img src="./images/erweicode1.png" alt="">
+                            </div>
+                            <div class="official">
+                                <p>—— 公众号 ——</p>
+                                <img src="./images/erweicode2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobile">咨询电话: <span>020-123456</span> 或 <span>020-326531</span></div>
+                    </div>
+                </div>
+                <ul class="footer-platform">
+                    <li>腾讯开放平台</li>
+                    <li>全球速卖通</li>
+                    <li>腾讯微云</li>
+                    <li>腾讯会议</li>
+                    <li>阿里云计算</li>
+                    <li>腾讯优图</li>
+                    <li>大麦网</li>
+                    <li>腾讯文档</li>
+                    <li>阿里巴巴集团</li>
+                    <li>腾讯企点</li>
+                    <li>网商银行</li>
+                    <li>阿里妈妈</li>
+                    <li>阿里通信</li>
+                    <li>阿里影业</li>
+                    <li>阿里健康</li>
+                    <li>阿里安全</li>
+                </ul>
+                <div class="footer-record">
+                    浙ICP备2012000356号-3
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入 jquery js -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- 引入 swiper js -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- swiper 配置项 -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            effect: 'fade',
+            autoplay: {
+                delay: 5000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+        });
+    </script>
+    <!-- 引入 common js -->
+    <script src="./js/common.js"></script>
+    <!-- 引入 index js -->
+    <script src="./js/index.js"></script>
+    <!-- 引入 aos js -->
+    <script src="./js/aos.js"></script>
+    <script>   AOS.init();</script>
+</body>
+
+</html>

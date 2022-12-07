@@ -1,0 +1,443 @@
+:root{
+    --maindeepColor: #101d36;
+    --mainColor: #114b9c;
+}
+.banner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 搜索区域 */
+.search-section{
+    width: 100%;
+    height: 13.125rem;
+    padding-top: 1.875rem;
+    background: #f5f9fe;
+    border-bottom: 1px solid #d9e2ef;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+}
+.search-bar a{
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    color: #101d36;
+    margin: 0 .625rem;
+}
+.search-bar a span{
+    margin-right: .625rem;
+}
+.search-bar a.current{
+    color: #114b9c;
+    font-weight: 700;
+}
+.search-input{
+    position: relative;
+    margin: 1.25rem auto 0;
+    width: 80%;
+    height: 5rem;
+    border: .1875rem solid #114b9c;
+    background: #fff;
+    border-radius: 0.8rem;
+}
+.search-input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+}
+.search-input input::placeholder{
+    color: #101d36;
+}
+.search-btn{
+    position: absolute;
+    top: -0.125rem;
+    right: -0.0625rem;
+    background: #114b9c;
+    width: 8rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+}
+.search-btn a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 5rem;
+}
+.search-input span{
+    display: block;
+    position: absolute;
+    top: 1.3125rem;
+    left: 1.6rem;
+    width: 0.3rem;
+    height: 2rem;
+    background-color: #101d36;
+}
+
+/* 关键词区域 */
+.keywords-section{
+    padding-top: 2.8125rem;
+}
+.keywords-title h4{
+    color: #101d36;
+    font-size: 1.5rem;
+}
+.keywords-title h4 span{
+    position: relative;
+    color: #114b9c;
+}
+.keywords-title h4 span::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.625rem;
+    background-color: rgba(189, 205, 227, 0.8);
+  }
+.keywords-theme{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3.125rem;
+}
+.keywords-theme i{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin: 0 1.5rem;
+    text-align: center;
+}
+.keywords-theme i.current{
+    color: #114b9c;
+    font-weight: bolder;
+}
+.keywords-theme i.current::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.625rem;
+    background-color: rgba(189, 205, 227, 0.8);
+}
+.keywords-city{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.keywords-city i{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin: 0 1.5rem;
+    text-align: center;
+}
+.keywords-city i.current{
+    color: #114b9c;
+    font-weight: bolder;
+}
+.keywords-city i.current::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.625rem;
+    background-color: rgba(189, 205, 227, 0.8);
+}
+.keywords-price{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.keywords-price i{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin: 0 1.5rem;
+    text-align: center;
+}
+.keywords-price i.current{
+    color: #114b9c;
+    font-weight: bolder;
+}
+.keywords-price i.current::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.625rem;
+    background-color: rgba(189, 205, 227, 0.8);
+}
+.keywords-theme,.keywords-city,.keywords-price,.kewords-type{
+    padding: 0 1.875rem;
+}
+.theme-title,.city-title,.price-title,.type-title{
+    width: 6.5rem;
+    font-weight: bolder;
+    color: #101d36;
+}
+.kewords-type{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.kewords-type i{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin: 0 1.5rem;
+    text-align: center;
+}
+.kewords-type i.current{
+    color: #114b9c;
+    font-weight: bolder;
+}
+.kewords-type i.current::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.625rem;
+    background-color: rgba(189, 205, 227, 0.8);
+}
+
+/* 搜索结果区域 */
+.result-section{
+    margin-top: 3rem;
+}
+.result-item{
+    position: relative;
+    padding: 2rem 0;
+    border-bottom: .0625rem solid #ccc;
+}
+.result-item{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.result-img{
+    width: 20%;
+}
+.result-info{
+    width: 78%;
+}
+.result-img img{
+    width: 100%;
+}
+.result-title{
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--maindeepColor);
+    width: 80%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.result-msg{
+    display: flex;
+    align-items: center;
+    color: #666;
+    margin-top: 0.5rem;
+}
+.result-review{
+    display: flex;
+    align-items: center;
+}
+.result-location{
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+}
+.result-location i{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.result-star{
+    display: flex;
+    align-items: center;
+    color: var(--maindeepColor);
+}
+.result-star i{
+    font-size: 1.5rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.stars{
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.stars span{
+    color: #e93f36;
+}
+.result-star .score{
+    margin-left: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.result-star .score em{
+    color: #e93f36;
+}
+.result-package{
+    margin-top: 1.5rem;
+}
+.result-package-title{
+    font-size: 1.5rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.result-package-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 3.25rem;
+    background-color: #f5f9fe;
+    margin: 0.6rem 0;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+    padding-left: 1rem;
+}
+.result-package-item p{
+    width: 80%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.result-package-reserve{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 6rem;
+    height: 3.3rem;
+    line-height: 3.3rem;
+    background-color: var(--mainColor);
+    color: #fff;
+    text-align: center;
+}
+.result-comment-num{
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    color: #666;
+}
+
+
+.result-house{
+    margin-top: 1.5rem;
+}
+.result-house-title{
+    font-size: 1.5rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+}
+.result-house-items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.result-house-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 49%;
+    height: 3.25rem;
+    background-color: #f5f9fe;
+    margin: 0.6rem 0;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+    padding-left: 1rem;
+}
+.result-house-reserve{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 6rem;
+    height: 3.3rem;
+    line-height: 3.3rem;
+    background-color: var(--mainColor);
+    color: #fff;
+    text-align: center;
+}
+
+/* 媒体查询 */
+@media screen and (max-width:1200px){
+    .banner{
+        width: 100%;
+    }
+}
+@media screen and (max-width:700px){
+    .content-msg{
+        width: 70%;
+        margin-left: 1.5rem;
+    }
+    .content-img{
+        width: 28%;
+        position: relative;
+        overflow: hidden;
+    }
+    .result-house-item{
+        width: 100%;
+    }
+    .result-section{
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+@media screen and (max-width:500px){
+    .keywords-section{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .result-package-reserve{
+        width: 7rem;
+    }
+    .result-house-reserve{
+        width: 7rem;
+    }
+    .result-img{
+        width: 25%;
+    }
+    .result-info{
+        width: 74%;
+    }
+}
+@media screen and (max-width:450px){
+    .content-msg-btn{
+        bottom: 0.5rem;
+    }
+    .theme-title{
+        width: 7.5rem;
+    }
+    .city-title{
+        width: 7.5rem;
+    }
+}

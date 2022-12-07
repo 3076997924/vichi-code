@@ -1,0 +1,494 @@
+:root{
+    --maindeepColor: #101d36;
+    --mainColor: #114b9c;
+}
+.banner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tour-con{
+    margin-top: 2.5rem;
+}
+.tour-title{
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.holiday-title{
+    width: 29.75rem;
+    height: 9.25rem;
+    background-image: url(../images/hotel/holidayTitle.png);
+    background-size: 29.75rem 9.25rem;
+}
+.offer-title{
+    width: 29.75rem;
+    height: 9.25rem;
+    background-image: url(../images/hotel/offerTitle.png);
+    background-size: 29.75rem 9.25rem;
+}
+.destinate-title{
+    width: 21.75rem;
+    height: 9.25rem;
+    background-image: url(../images/hotel/destinTitle.png);
+    background-size: 21.75rem 9.25rem;
+}
+.recommend-title{
+    width: 29.75rem;
+    height: 9.25rem;
+    background-image: url(../images/hotel/recomTitle.png);
+    background-size: 29.75rem 9.25rem;
+}
+
+
+/* 搜索区域 */
+.search{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 333;
+    bottom: -5.125rem;
+    left: 50%;
+    padding: 0 2.5rem;
+    transform: translateX(-50%);
+    width: 80.75rem;
+    height: 8.5rem;
+    border-radius: 1rem;
+    background: #fff;
+}
+.search-where{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #000;
+    font-style: italic;
+}
+.search-where span{
+    color: #114b9c;
+}
+.search-input{
+    position: relative;
+    width: 58rem;
+    height: 5rem;
+    background: #f8f8f8;
+    margin-left: 3rem;
+    border-radius: 1rem;
+}
+.search-input input{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 2.25rem;
+    font-size: 1.5rem;
+}
+.search-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -6rem;
+    width: 6.25rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    background: #114b9c;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.search-result{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 8.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75.25rem;
+    padding: 3.125rem;
+    background: #def1fd;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.search-result-item{
+    width: 12rem;
+}
+.search-result-item a{
+    display: block;
+    display: flex;
+}
+.search-result-item img{
+    width: 5rem;
+    height: 5rem;
+}
+.search-result-info{
+    margin-left: .625rem;
+    padding-top: .625rem;
+}
+.search-result-info h4{
+    color: #1d2840;
+    font-size: 1rem;
+}
+.search-result-info p{
+    color: #666;
+    font-size: .875rem;
+}
+
+
+
+
+/* 假期体验区域 */
+.holiday-section{
+    padding: 8rem 0;
+}
+.holiday-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+.holiday-item{
+    position: relative;
+    width: 24.5%;
+    overflow: hidden;
+}
+.holiday-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.holiday-item a img{
+    width: 100%;
+    height: 100%;
+}
+.holiday_info{
+    position: absolute;
+    bottom: 5rem;
+    left: 2rem;
+}
+.holiday_info h4{
+    color: #fff;
+    font-size: 2.3rem;
+}
+.holiday_info p{
+    font-weight: 500;
+}
+.holiday_info span{
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+.holiday-item:hover .mask{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.holiday-item:hover .holiday_info{
+    letter-spacing: .25rem;
+}
+
+
+
+/* 最佳优惠区域 */
+.offer-section{
+    padding: 5rem 0;
+}
+.offer-con{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.offer-item{
+    width: 100%;
+    position: relative;
+}
+.offer-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.offer-item a img{
+    width: 100%;
+    height: 100%;
+}
+.offer-info{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 0 30rem;
+    top: 15rem;
+}
+.offer-info h4{
+    font-size: 2.3rem;
+}
+.offer-info p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.offer-more{
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 11rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    color: var(--mainColor);
+    font-weight: 500;
+    text-align: center;
+}
+.offer-item:hover .offer-info{
+    letter-spacing: 0.25rem;
+}
+.offer-item:hover .mask{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* 目的地区域 */
+.destinate-section{
+    padding: 5rem 0;
+}
+.destinate-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+.desinate-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.desinate-info h4{
+    font-size: 2.3rem;
+}
+.desinate-info p{
+    margin-top: 1rem;
+    font-weight: 500;
+}
+.destinate-item{
+    position: relative;
+    margin-top: 1rem;
+}
+.destinate-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.destinate-item a img{
+    width: 100%;
+    height: 100%;
+}
+.destinate-item:nth-child(1){
+    width: 40%;
+}
+.destinate-item:nth-child(2){
+    width: 29%;
+}
+.destinate-item:nth-child(3){
+    width: 29%;
+}
+.destinate-item:nth-child(4){
+    width: 29%;
+}
+.destinate-item:nth-child(5){
+    width: 29%;
+}
+.destinate-item:nth-child(6){
+    width: 40%;
+}
+.destinate-item:hover .mask{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.destinate-item:hover .desinate-info{
+    letter-spacing: 0.25rem;
+}
+
+
+/* 酒店推荐区域 */
+.recommend-section{
+    padding: 5rem 0;
+}
+.recommend-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+.recommend-items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.recommend-item{
+    position: relative;
+}
+.recommend-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.recommend-item a img{
+    width: 100%;
+    height: 100%;
+}
+.recommend-items:nth-child(1){
+    width: 55%;
+}
+.recommend-items:nth-child(1) .recommend-item:nth-child(-n+2){
+    margin-top: 0;
+}
+.recommend-items:nth-child(1) .recommend-item{
+    width: 49%;
+    margin-top: 1rem;
+}
+.recommend-items:nth-child(2){
+    width: 44%;
+}
+.recommend-items:nth-child(3){
+    width: 28%;
+    margin-top: 1rem;
+}
+.recommend-items:nth-child(4){
+    width: 72%;
+    margin-top: 1rem;
+}
+.recommend-info{
+    position: absolute;
+    left: 2rem;
+    bottom: 5rem;
+}
+.recommend-info h4{
+    font-size: 2.3rem;
+}
+.recommend-info p{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.recommend-item:hover .recommend-info{
+    letter-spacing: 0.25rem;
+}
+.recommend-item:hover .mask{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:1200px){
+    .banner{
+        width: 100%;
+    }   
+}
+@media screen and (max-width:750px){
+    .holiday-section{
+        padding: 8rem 1rem;
+    }
+    .offer-section{
+        padding: 5rem 1rem;
+    }
+    .destinate-section{
+        padding: 5rem 1rem;
+    }
+    .recommend-section{
+        padding: 5rem 1rem;
+    }
+    .holiday-item{
+        width: 49%;
+        margin-top: 1.5rem;
+    }
+    .offer-item{
+        height: 30rem;
+    } 
+    .offer-info{
+        top: 7rem;
+        padding: 0 2rem;
+    }
+    .destinate-item:nth-child(1){
+        width: 100%;
+    }
+    .destinate-item:nth-child(2){
+        width: 49%;
+    }
+    .destinate-item:nth-child(3){
+        width: 49%;
+    }
+    .destinate-item:nth-child(4){
+        width: 49%;
+    }
+    .destinate-item:nth-child(5){
+        width: 49%;
+    }
+    .destinate-item:nth-child(6){
+        width: 100%;
+    }
+    .recommend-items:nth-child(1){
+        width: 100%;
+    }
+    .recommend-items:nth-child(2){
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .recommend-items:nth-child(2) .recommend-item{
+        width: 100%;
+    }
+    .recommend-items:nth-child(3){
+        width: 36%;
+    }
+    .recommend-items:nth-child(4){
+        width: 62%;
+    }
+    .recommend-items:nth-child(4) .recommend-item{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .search{
+        width: 90%;
+    }
+    .search-input{
+        width: 70%;
+    }
+    .search-result{
+        width: 80%;
+    }
+}
+@media screen and (max-width:500px) {
+    .search{
+        width: 90%;
+    }
+    .search-input{
+        width: 60%;
+        gap: 2rem;
+    }
+    .search-result-item{
+        width: 15rem;
+    }
+}
+@media screen and (max-width:352px) {
+    .search{
+        width: 95%;
+    }
+    .search-input{
+        width: 65%;
+        margin-left: 1rem;
+    }
+    .search-where{
+        width: 15%;
+    }
+}

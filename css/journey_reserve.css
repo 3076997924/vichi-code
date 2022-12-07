@@ -1,0 +1,617 @@
+:root{
+    --maindeepColor: #101d36;
+    --mainColor: #114b9c;
+}
+
+
+/* 友情提示区域 */
+.reserve-tips-section{
+    width: 100%;
+    height: 5rem;
+    background: #f5f9fe;
+}
+.reserve-tips{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    font-size: 1.5rem;
+    color: #e93f36;
+}
+
+/* 链接条区域 */
+.linksbar-section{
+    background: #fff;
+}
+
+/* 表单区域 */
+.reserve-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 3.125rem;
+}
+.reserve-left{
+    width: 64%;
+}
+.reserve-right{
+    width: 35%;
+}
+.reserve-box{
+    padding: 1.875rem 1.25rem;
+    background: #f5f9fe;
+    margin-top: 1rem;
+    font-weight: bolder;
+    color: var(--maindeepColor);
+}
+.reserve-box h4{
+    font-size: 1.6rem;
+    color: var(--maindeepColor);
+    font-style: italic;
+}
+.reserve-box p{
+    font-weight: 500;
+    color: #666;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.reserve-title {
+    border-top: .4rem solid var(--mainColor);
+}
+.reserve-title h2{
+    color: var(--maindeepColor);
+    font-size: 2rem;
+}
+.reserve-title p{
+    color: var(--maindeepColor);
+    margin-top: .625rem;
+}
+.reserve-msg-btns{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.adult-btns{
+    margin-right: 2.5rem;
+}
+.adult-btns,.child-btns{
+    display: flex;
+    align-items: center;
+}
+.reserve-msg-btns button{
+    width: 3.125rem;
+    height: 3.125rem;
+    background: #fff;
+    font-size: 2rem;
+    margin: 0 1.25rem;
+}
+.adult-btns span{
+    margin: 0 .5rem;
+}
+.child-btns span{
+    margin: 0 .5rem;
+}
+.info-form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.info-form div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 49%;
+    margin: .8rem 0;
+}
+.info-form div label{
+    position: relative;
+    display: block;
+    width: 9.25rem;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+}
+.info-form div label span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e93f36;
+}
+.info-form div input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+
+
+.adult-form{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.adult-form div{
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+}
+.adult-form div label{
+    position: relative;
+    display: block;
+    width: 9.25rem;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+}
+.adult-form div label span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e93f36;
+}
+.adult-name input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.adult-contact input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.adult-number input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.adult-birth input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.adult-valid input{
+    width: 12rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.adult-valid i{
+    cursor: pointer;
+    display: block;
+    width: 11rem;
+    height: 4rem;
+    line-height: 4rem;
+    margin-left: 1rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    background-color: var(--mainColor);
+}
+.adult-certificate > span{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.child-form{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.child-form div{
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+}
+.child-form div label{
+    position: relative;
+    display: block;
+    width: 9.25rem;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+}
+.child-form div label span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e93f36;
+}
+.child-name input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.child-contact input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.child-number input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.child-birth input{
+    width: 24rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.child-valid input{
+    width: 12rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+.child-valid i{
+    cursor: pointer;
+    display: block;
+    width: 11rem;
+    height: 4rem;
+    line-height: 4rem;
+    margin-left: 1rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    background-color: var(--mainColor);
+}
+.child-certificate > span{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+input[type=checkbox] {
+    appearance:none;
+    -moz-appearance:none; /* Firefox */ 
+    -webkit-appearance:none;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.875rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    text-align: center;
+}
+
+input[type=checkbox]:after {
+    position: absolute;
+    font-size: 1.5rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    content: " ";
+    color: #fff;
+    display: inline-block;
+    visibility: visible;
+    background:#FFFFFF;
+    border: 1px solid #ccc;
+}
+
+input[type=checkbox]:checked:after {
+    content: "✓";
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: var(--mainColor);
+}
+
+.reserve-remarks textarea{
+    resize: none;
+    width: 100%;
+    height: 11rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+.reserve-summary{
+    border-top: .4rem solid var(--mainColor);
+    padding: 1.875rem 1.25rem;
+    font-size: 1.5rem;
+}
+.summary-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: .0625rem dashed #ccc;
+}
+.integral-summary span{
+    display: flex;
+    align-items: center;
+}
+.integral-summary span input{
+    margin-left: 0.8rem;
+}
+
+.summary-pay-way{
+    margin-top: 2rem;
+}
+.summary-pay-way h5{
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--maindeepColor);
+}
+.pay-items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5625rem;
+}
+.pay-item{
+    cursor: pointer;
+    width: 11rem;
+    height: 4rem;
+    text-align: center;
+    line-height: 3.75rem;
+    font-size: 1.7rem;
+    color: var(--maindeepColor);
+    font-weight: bolder;
+    background-color: #fff;
+}
+.pay-item.current{
+    background-color: var(--mainColor);
+    color: #fff;
+}
+.pay-con-item{
+    margin-top: 6.25rem;
+}
+.coupon-summary{
+    cursor: pointer;
+}
+.wechatWay{
+    width: 100%;
+    height: 5rem;
+    background: var(--mainColor);
+}
+.wechatWay a{
+    display: block;
+    width: 100%;
+    line-height: 5rem;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.alipayWay{
+    width: 100%;
+    height: 5rem;
+    background: var(--mainColor);
+}
+.alipayWay a{
+    display: block;
+    width: 100%;
+    line-height: 5rem;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.offlineWay{
+    width: 100%;
+    height: 5rem;
+    background: var(--mainColor);
+}
+.offlineWay a{
+    display: block;
+    width: 100%;
+    line-height: 5rem;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.contact-service{
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    height: 5rem;
+    border: .25rem solid var(--mainColor);
+    color: var(--mainColor);
+    font-weight: bolder;
+    text-align: center;
+    line-height: 5rem;
+}
+
+
+/* 优惠券 */
+.discount{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    width: 80rem;
+    height: 30.125rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    overflow: auto;
+}
+.discount h5{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--maindeepColor);
+}
+.discount-items{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+.discount-item{
+    display: flex;
+    align-items: center;
+    width: 49%;
+    height: 12.5rem;
+    background: #f5f9fe;
+    margin: 0 2rem;
+    border-radius: 1rem;
+    padding: 0 2rem;
+}
+.discount-btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.discount-btns div{
+    cursor: pointer;
+    text-align: center;
+    width: 10.625rem;
+    height: 4.375rem;
+    line-height: 4.375rem;
+    margin: 0 2rem;
+    font-weight: bolder;
+}
+.discount-cancel{
+    border: .25rem solid var(--mainColor);
+    color: var(--mainColor);
+}
+.discount-sure{
+    background: var(--mainColor);
+    color: #fff;
+}
+.discount-money{
+    padding: 1rem 0;
+    padding-right: 1rem;
+    border-right: 1px dashed #114b9c;
+}
+.discount-money-hd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.discount-money-hd span{
+    color: var(--maindeepColor);
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.discount-money-hd span i{
+    font-size: 3rem;
+}
+.discount-msg{
+    padding-left: 1rem;
+}
+.discount-msg-hd{
+    display: flex;
+    align-items: center;
+}
+.discount-msg-hd span{
+    display: block;
+    width: 4rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    background: #e93f36;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+}
+.discount-msg-hd i{
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: var(--maindeepColor);
+}
+.discount-msg-md{
+    margin-top: 1rem;
+}
+.discount-msg-md span{
+    color: var(--maindeepColor);
+}
+.discount-msg-md i{
+    color: #4d5668;
+    margin-left: 1rem;
+}
+.discount-msg-sure{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.discount-msg-sure button{
+    width: 6.25rem;
+    height: 3.75rem;
+    background: var(--mainColor);
+    color: #fff;
+}
+.discount-sure-input{
+    display: flex;
+    align-items: center;
+}
+.discount-sure-input span{
+    margin-left: 1rem;
+}
+
+.mask{
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+/* 媒体查询 */
+@media screen and (max-width:1200px){
+    .wrap{
+        width: 100%;
+    }
+}
+@media screen and (max-width:991px){
+    .reserve-tips-section{
+        padding: 0 1rem;
+    }
+    .linksbar-section{
+        padding: 0 1rem;
+    }
+    .reserve-con-section{
+        padding: 0 1rem;
+    }
+    .reserve-left{
+        width: 100%;
+    }
+    .reserve-right{
+        width: 100%;
+    }
+    .pay-items{
+        justify-content: center;
+    }
+    .pay-item{
+        margin: 0 2rem;
+    }
+}
+
+@media screen and (max-width:450px){
+    .info-form div label{
+        width: 10.25rem;
+    }
+    .adult-form div label{
+        width: 10.25rem;
+    }
+    .adult-valid i{
+        width: 12rem;
+    }
+    .child-form div label{
+        width: 10.25rem;
+    }
+    .child-valid i{
+        width: 12rem;
+    }
+}

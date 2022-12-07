@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vichi-旅程</title>
+    <!-- 引入初始化样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入相同样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入journey 样式 -->
+    <link rel="stylesheet" href="./css/journey.css">
+    <!-- 引入 aos css -->
+    <link rel="stylesheet" href="./css/aos.css">
+    <!-- 引入 字体图标  iconfont -->
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_3788509_bx5rjehcoih.css?spm=a313x.7781069.1998910419.53&file=font_3788509_bx5rjehcoih.css">
+    <!-- 引入 轮播图 swiper -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #114b9c !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 2.25rem;
+            height: .75rem;
+            border-radius: 0;
+            opacity: 1;
+            background: #fff;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: 3.75rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 header section  -->
+    <header class="header-section">
+        <div class="header-bar-section">
+            <div class="login">
+                <div class="login-icon">
+                    <img src="./images/icon-login.png" alt="">
+                </div>
+                <p>
+                    您好，请先 <a href="javascript:;">登陆</a> | <a href="javascript:;">注册</a>
+                </p>
+            </div>
+            <ul class="header-bar">
+                <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+            </ul>
+        </div>
+        <div class="header-bd-section">
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><span>首页</span></a></li>
+                    <li class="current"><a href="./journey.html"><span>旅程</span></a></li>
+                    <li><a href="javascript:;"><span>酒店</span></a></li>
+                    <li><a href="javascript:;"><span>机票</span></a></li>
+                    <li><a href="javascript:;"><span>定制路线</span></a></li>
+                    <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                    <li><a href="javascript:;"><span>会员中心</span></a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-links">
+                <div class="mobile-btns">
+                    <div class="mobile-wrap">
+                        <div class="mobile-title">
+                            我的账号
+                            <span class="iconfont icon-sort" id="closeMobile"></span>
+                        </div>
+                        <div class="login-mobile">
+                            <a href="">登陆</a>
+                        </div>
+                        <div class="register-mobile">
+                            <a href="">注册</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-mobile">
+                    <div class="mobile-wrap">
+                        <li class="current"><a href="index.html"><span>首页</span></a></li>
+                        <li><a href="./journey.html"><span>旅程</span></a></li>
+                        <li><a href="javascript:;"><span>酒店</span></a></li>
+                        <li><a href="javascript:;"><span>机票</span></a></li>
+                        <li><a href="javascript:;"><span>定制路线</span></a></li>
+                        <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                        <li><a href="javascript:;"><span>会员中心</span></a></li>
+                    </div>
+                </ul>
+                <div class="other-links-mobile">
+                    <div class="mobile-wrap">
+                        <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-mobile-btn">
+                <span class="iconfont icon-sort" id="openMobile"></span>
+            </div>
+            <div class="compare">
+                <img src="./images/PK.png" alt="" class="pk">
+                <img src="./images/compare.png" alt="" class="com-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- 轮播图 swiper section -->
+    <section class="swiper-section">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/swipper1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner5.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 搜索区域 -->
+        <section class="search-section">
+            <div class="search">
+                <div class="search-where">
+                    <span>你</span>想去哪儿?
+                </div>
+                <div class="search-input">
+                    <input type="text" placeholder="请输入目的地关键字进行搜索">
+                    <div class="search-btn"><a href="./journey_search.html">搜索</a></div>
+                </div>
+                <div class="search-result" style="display: none;">
+                    <div class="search-result-item">
+                        <a href="./journey_search.html">
+                            <img src="./images/result1.jpg" alt="">
+                            <div class="search-result-info">
+                                <h4>芽庄</h4>
+                                <p>5113条路线</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-result-item">
+                        <a href="./journey_search.html">
+                            <img src="./images/result2.jpg" alt="">
+                            <div class="search-result-info">
+                                <h4>胡志明市</h4>
+                                <p>64条路线</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-result-item">
+                        <a href="./journey_search.html">
+                            <img src="./images/result3.jpg" alt="">
+                            <div class="search-result-info">
+                                <h4>岘港</h4>
+                                <p>116条路线</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-result-item">
+                        <a href="./journey_search.html">
+                            <img src="./images/result4.jpg" alt="">
+                            <div class="search-result-info">
+                                <h4>河内</h4>
+                                <p>56条路线</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-result-item">
+                        <a href="./journey_search.html">
+                            <img src="./images/result5.jpg" alt="">
+                            <div class="search-result-info">
+                                <h4>会安</h4>
+                                <p>19条路线</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-result-item">
+                        <a href="./journey_search.html">
+                            <img src="./images/result6.jpg" alt="">
+                            <div class="search-result-info">
+                                <h4>大叻</h4>
+                                <p>36条路线</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-result-item">
+                        <a href="./journey_search.html">
+                            <img src="./images/result7.jpg" alt="">
+                            <div class="search-result-info">
+                                <h4>美奈</h4>
+                                <p>41条路线</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-result-item">
+                        <a href="./journey_search.html">
+                            <img src="./images/result8.jpg" alt="">
+                            <div class="search-result-info">
+                                <h4>下龙湾</h4>
+                                <p>78条路线</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- 全景游区域 -->
+    <section class="panorama-section">
+        <div class="banner">
+            <div class="panorama">
+                <div class="panorama-title tour-title" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+
+                </div>
+                <div class="panorama-con tour-con">
+                    <div class="panorama-con-left">
+                        <div class="panoramalfItem" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/panorama1.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="panoramalMsg">
+                                    <h4>越南胡志明市+美奈+大叻6日5晚自由行</h4>
+                                    <p>美奈2晚+大叻1晚</p>
+                                </div>
+                                <div class="item-bar">
+                                    免签证
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panoramalfItem" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/panorama3.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="item-bar">
+                                    还有空间
+                                </div>
+                            </a>
+                            <div class="panoramalInfo">
+                                <h4>芽庄珍珠岛游乐园一日游</h4>
+                                <p>高空欣赏海景+四岛尽情浮潜</p>
+                            </div>
+                        </div>
+                        <div class="panoramalfItem" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/panorama4.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="item-bar">
+                                    还有空间
+                                </div>
+                            </a>
+                            <div class="panoramalInfo">
+                                <h4>越南富国岛香岛公园跨...</h4>
+                                <p>乘船游览四岛+畅玩水上乐园</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panorama-con-right">
+                        <div class="panoramartItem" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/panorama2.jpeg" alt="">
+                                <div class="mask"></div>
+                                <div class="panoramalMsg">
+                                    <h4>越南河内+下龙湾5日自由行</h4>
+                                    <p>下龙湾2晚 可选邮轮体验</p>
+                                </div>
+                                <div class="item-bar">
+                                    热销之旅
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panoramartItem" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/panorama5.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="item-bar">
+                                    优惠价格
+                                </div>
+                            </a>
+                            <div class="panoramalInfo">
+                                <h4>越南富国岛指甲岛一日游</h4>
+                                <p>三岛/四岛跳岛游</p>
+                            </div>
+                        </div>
+                        <div class="panoramartItem" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/panorama6.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="item-bar">
+                                    免签证
+                                </div>
+                            </a>
+                            <div class="panoramalInfo">
+                                <h4>越南富国岛6日4晚自由行</h4>
+                                <p>免签+连住 酒店任选</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panorama-more tour-more" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                    <a href="./journey_more.html">查看更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 北越游区域 -->
+    <section class="northVie-section">
+        <div class="banner">
+            <div class="northVie">
+                <div class="northVie-title tour-title" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+
+                </div>
+                <div class="northVie-con tour-con">
+                    <div class="northVielf">
+                        <div class="northVie-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/northVie1.jpg" alt="">
+                                <div class="mask">
+
+                                </div>
+                                <div class="northVie-msg">
+                                    <h4>越南芽庄6日5晚自由行</h4>
+                                    <p>网红哈瓦那3晚+海滨2晚（推荐阿南/米娅/富神）</p>
+                                </div>
+                                <div class="item-bar">
+                                    自由行
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="northVie-rt">
+                        <div class="northVie-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/northVie2.jpg" alt="">
+                                <div class="mask">
+
+                                </div>
+                                <div class="northVie-msg">
+                                    <h4>越南3-15日自由行</h4>
+                                    <p>先进芽庄 车转大叻和美奈 西贡返回</p>
+                                </div>
+                                <div class="item-bar">
+                                    芽庄出发
+                                </div>
+                            </a>
+                        </div>
+                        <div class="northVie-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/northVie3.jpg" alt="">
+                                <div class="mask">
+
+                                </div>
+                                <div class="northVie-msg">
+                                    <h4>越南芽庄6日5晚自由行</h4>
+                                    <p>下龙湾2晚 可选邮轮体验</p>
+                                </div>
+                                <div class="item-bar">
+                                    跟团游
+                                </div>
+                            </a>
+                        </div>
+                        <div class="northVie-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/northVie4.jpg" alt="">
+                                <div class="mask">
+
+                                </div>
+                                <div class="northVie-msg">
+                                    <h4>越南芽庄6日5晚自由行</h4>
+                                    <p>网红哈瓦那3晚+海滨2晚（推荐阿南/米娅/富神）</p>
+                                </div>
+                                <div class="item-bar">
+                                    还有空间
+                                </div>
+                            </a>
+                        </div>
+                        <div class="northVie-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/northVie5.jpg" alt="">
+                                <div class="mask">
+
+                                </div>
+                                <div class="northVie-msg">
+                                    <h4>越南富国岛白沙滩夜游</h4>
+                                    <p>船上欣赏日落+享用美味晚餐</p>
+                                </div>
+                                <div class="item-bar">
+                                    还有空间
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="northVie-more tour-more" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                    <a href="./journey_more.html">
+                        查看更多
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 南越游区域 -->
+    <section class="southVie-section">
+        <div class="banner">
+            <div class="southVie">
+                <div class="southVie-title tour-title" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+
+                </div>
+                <div class="southVie-con tour-con2" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                    <a href="./journey_detail.html">
+                        <img src="./images/southVie.jpg" alt="">
+                        <div class="mask"></div>
+                        <div class="southVie-msg">
+                            <h4>古芝地道+胡志明华人街一日游</h4>
+                            <p>美奈住3晚 【私家专车串游含接送机】#良辰美景·不期而遇# 4小时轻松飞抵『ins度假风』西贡“《情人》的足迹”+美奈“冰火两重天”</p>
+                        </div>
+                        <div class="southVie-more tour-more2">
+                            查看更多
+                        </div>
+                        <div class="item-bar">
+                            自由行
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 中部游区域 -->
+    <section class="middleVie-section">
+        <div class="banner">
+            <div class="middleVie">
+                <div class="middleVie-title tour-title" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+
+                </div>
+                <div class="middleVie-con tour-con">
+                    <div class="middVie-lf">
+                        <div class="middVie-lf-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/middleVie1.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="middVie-info">
+                                    <h4>稻城亚丁+理塘5晚6日</h4>
+                                    <p>海通沟、觉巴山、72道拐、通麦大桥， 川藏线的天险没有以往陡峭</p>
+                                </div>
+                                <div class="item-bar">
+                                    自由行
+                                </div>
+                            </a>
+                        </div>
+                        <div class="middVie-lf-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/middleVie3.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="middVie-info">
+                                    <h4>西藏阿里南线拼车8日深度游</h4>
+                                    <p>西藏阿里旅游 拉萨旅游</p>
+                                </div>
+                                <div class="item-bar">
+                                    品质纯玩
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="middVie-rt">
+                        <div class="middVie-rt-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/middleVie2.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="middVie-info">
+                                    <h4>怒江+丙察察+老姆登+独龙江</h4>
+                                    <p>真纯玩、不去购物店（藏药馆、家访）</p>
+                                </div>
+                                <div class="item-bar">
+                                    拉萨出发
+                                </div>
+                            </a>
+                        </div>
+                        <div class="middVie-rt-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/middleVie4.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="middVie-info">
+                                    <h4>川藏北线经典十日游</h4>
+                                    <p>沿途领略阿坝川西风光，感受藏羌...</p>
+                                </div>
+                                <div class="item-bar">
+                                    人机航拍
+                                </div>
+                            </a>
+                        </div>
+                        <div class="middVie-rt-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/middleVie5.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="middVie-info">
+                                    <h4>西藏全景大环线7日游</h4>
+                                    <p>行程出发前，降价退差价...</p>
+                                </div>
+                                <div class="item-bar">
+                                    连线景点
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="middleVie-more tour-more" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+                    <a href="./journey_more.html">
+                        查看更多
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 中南半岛区域 -->
+    <section class="indochina-section">
+        <div class="banner">
+            <div class="indochina">
+                <div class="indochina-title tour-title" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+
+                </div>
+                <div class="indochina-con tour-con">
+                    <div class="indochina-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <a href="./journey_detail.html">
+                            <img src="./images/indochina1.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="indochina-info">
+                                <h4>巴厘岛佩妮达岛一日游</h4>
+                                <p>含酒店接送 中文地陪，珊瑚区浮潜</p>
+                            </div>
+                            <div class="item-bar">
+                                游山玩水
+                            </div>
+                        </a>
+                    </div>
+                    <div class="indochina-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <a href="./journey_detail.html">
+                            <img src="./images/indochina2.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="indochina-info">
+                                <h4>佩妮达岛一日游</h4>
+                                <p>当红向导 | 专车私享</p>
+                            </div>
+                            <div class="item-bar">
+                                海滨沙滩
+                            </div>
+                        </a>
+                    </div>
+                    <div class="indochina-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <a href="./journey_detail.html">
+                            <img src="./images/indochina3.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="indochina-info">
+                                <h4>库塔海滩一日游</h4>
+                                <p>3处浮潜特色午餐探秘红树林可选香蕉船</p>
+                            </div>
+                            <div class="item-bar">
+                                上门接送
+                            </div>
+                        </a>
+                    </div>
+                    <div class="indochina-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <a href="./journey_detail.html">
+                            <img src="./images/indochina4.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="indochina-info">
+                                <h4>天空之门一日游</h4>
+                                <p>日出登山徒步+专车+接送</p>
+                            </div>
+                            <div class="item-bar">
+                                可订明日
+                            </div>
+                        </a>
+                    </div>
+                    <div class="indochina-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                        <a href="./journey_detail.html">
+                            <img src="./images/indochina5.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="indochina-info">
+                                <h4>巴厘岛罗威纳海滩一日游</h4>
+                                <p>追海豚+火山温泉</p>
+                            </div>
+                            <div class="item-bar">
+                                无自费
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="indochina-more tour-more" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+                    <a href="./journey_more.html">
+                        查看更多
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 边境游区域 -->
+    <section class="border-section">
+        <div class="banner">
+            <div class="border">
+                <div class="border-title tour-title" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+
+                </div>
+                <div class="border-con tour-con2" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                    <a href="./journey_detail.html">
+                        <img src="./images/border.jpg" alt="">
+                        <div class="border-info">
+                            <h4>追海豚+火山温泉</h4>
+                            <p>行程定制 人在当地服务棒 24小时管家服务</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="border-more tour-more2">
+                            查看更多
+                        </div>
+                        <div class="item-bar">
+                            自由行
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 体验游区域 -->
+    <section class="experience-section">
+        <div class="banner">
+            <div class="experience">
+                <div class="experience-title tour-title" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+
+                </div>
+                <div class="experience-con tour-con">
+                    <div class="experience-left">
+                        <div class="experience-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/experience1.jpg" alt="">
+                                <div class="mask">
+
+                                </div>
+                                <div class="experience-info">
+                                    <h4>南疆+喀什市+帕米尔高原9日8晚跟团游</h4>
+                                    <p>0人精品小团·金秋赏胡杨林·打卡中巴友谊公路+沙漠公路+盘龙古道</p>
+                                </div>
+                                <div class="item-bar">
+                                    赠取消险
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="experience-right">
+                        <div class="experience-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/experience2.jpg" alt="">
+                                <div class="mask">
+
+                                </div>
+                                <div class="experience-info">
+                                    <h4>丽江+香格里拉3-15日自由行</h4>
+                                    <p>丽江进出·全线酒店客栈可选</p>
+                                </div>
+                                <div class="item-bar">
+                                    成团保障
+                                </div>
+                            </a>
+                        </div>
+                        <div class="experience-item" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/experience3.jpg" alt="">
+                                <div class="mask">
+
+                                </div>
+                                <div class="experience-info">
+                                    <h4>丽江+大理市6日自由行</h4>
+                                    <p>双城季 | 3晚丽江+2晚大理</p>
+                                </div>
+                                <div class="item-bar">
+                                    攻略完备
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-more tour-more" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+                    <a href="./journey_more.html">
+                        查看更多
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 高端度假区域 -->
+    <section class="upscale-section">
+        <div class="banner">
+            <div class="upscale">
+                <div class="upscale-title tour-title" data-aos="zoom-in-up" data-aos-delay="60"
+                    data-aos-duration="1000">
+
+                </div>
+                <div class="upscale-con tour-con2">
+                    <div class="upscale-lf">
+                        <div class="upscale-lf-item upscale-item" data-aos="zoom-in-up" data-aos-delay="60"
+                            data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/upscale1.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="upscale-info">
+                                    <h4>深度人文·宁夏6日5晚私家团</h4>
+                                    <p>银川+中卫趣度假</p>
+                                </div>
+                                <div class="item-bar">
+                                    成团保障
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="upscale-md">
+                        <div class="upscale-md-item upscale-item" data-aos="zoom-in-up" data-aos-delay="60"
+                            data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/upscale2.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="upscale-info">
+                                    <h4>自然探索·西双版纳5日4晚私家团</h4>
+                                    <p>普洱小熊猫庄园独栋木屋别墅</p>
+                                </div>
+                                <div class="item-bar">
+                                    峡谷峡湾
+                                </div>
+                            </a>
+                        </div>
+                        <div class="upscale-md-item upscale-item" data-aos="zoom-in-up" data-aos-delay="60"
+                            data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/upscale3.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="upscale-info">
+                                    <h4>西安5日4晚跟团游</h4>
+                                    <p>壶口瀑布+华山+兵马俑 全程16人精致小团</p>
+                                </div>
+                                <div class="item-bar">
+                                    古镇古村
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="upscale-rt">
+                        <div class="upscale-rt-item upscale-item" data-aos="zoom-in-up" data-aos-delay="60"
+                            data-aos-duration="1000">
+                            <a href="./journey_detail.html">
+                                <img src="./images/upscale4.jpg" alt="">
+                                <div class="mask"></div>
+                                <div class="upscale-info">
+                                    <h4>平遥+壶口瀑布6日5晚自由行</h4>
+                                    <p>【山西精华包车游】经济型酒店及房型任选</p>
+                                </div>
+                                <div class="item-bar">
+                                    精致小团
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="upscale-more tour-more" data-aos="zoom-in-up" data-aos-delay="60" data-aos-duration="1000">
+                    <a href="./journey_more.html">
+                        查看更多
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer class="footer-section">
+        <div class="footer-hd">
+            <div class="banner">
+                <ul class="ft-nav">
+                    <li><a href="./journey.html">旅程</a></li>
+                    <li><a href="javascript:;">酒店</a></li>
+                    <li><a href="javascript:;">机票</a></li>
+                    <li><a href="javascript:;">定制路线</a></li>
+                    <li><a href="javascript:;">游记攻略</a></li>
+                    <li><a href="javascript:;">会员中心</a></li>
+                </ul>
+                <div class="ft-top">
+                    返回顶部
+                    <img src="./images/icon_back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bd">
+            <div class="banner">
+                <div class="footer-msg">
+                    <div class="footer-msg-left">
+                        <div class="footer-msg-notice">
+                            金莲国旅: <br>
+                            对于中国游客而言，以及对于越来越多的世界各地的游客而言， 携程是其可值得信赖的旅行平台，用户可以通过携程的平台进行任何类型的旅行预订，包括从目的地内活动、周末短假及短途旅行，到跨境..
+                        </div>
+                        <div class="footer-msg-contact">
+                            联系我们: <br>
+                            <p>服务热线：020-226231</p>
+                            <p>合作热线：020-115423</p>
+                            <p>联系邮箱：21542512@qq.com</p>
+                            <p>公司地址：广东省广州市天河区龙洞森林公园环山路</p>
+                        </div>
+                    </div>
+                    <div class="footer-msg-right">
+                        <div class="erweicode">
+                            <div class="wechat">
+                                <p>—— 微信客服 ——</p>
+                                <img src="./images/erweicode1.png" alt="">
+                            </div>
+                            <div class="official">
+                                <p>—— 公众号 ——</p>
+                                <img src="./images/erweicode2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobile">咨询电话: <span>020-123456</span> 或 <span>020-326531</span></div>
+                    </div>
+                </div>
+                <ul class="footer-platform">
+                    <li>腾讯开放平台</li>
+                    <li>全球速卖通</li>
+                    <li>腾讯微云</li>
+                    <li>腾讯会议</li>
+                    <li>阿里云计算</li>
+                    <li>腾讯优图</li>
+                    <li>大麦网</li>
+                    <li>腾讯文档</li>
+                    <li>阿里巴巴集团</li>
+                    <li>腾讯企点</li>
+                    <li>网商银行</li>
+                    <li>阿里妈妈</li>
+                    <li>阿里通信</li>
+                    <li>阿里影业</li>
+                    <li>阿里健康</li>
+                    <li>阿里安全</li>
+                </ul>
+                <div class="footer-record">
+                    浙ICP备2012000356号-3
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入 jquery js -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- 引入 swiper js -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- swiper 配置项 -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            effect: 'fade',
+            autoplay: {
+                delay: 5000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+        });
+    </script>
+    <!-- 引入 common js -->
+    <script src="./js/common.js"></script>
+    <!-- 引入 aos js -->
+    <script src="./js/aos.js"></script>
+    <script>   AOS.init();</script>
+    <!-- 引入journey js -->
+    <script src="./js/journey.js"></script>
+</body>
+
+</html>

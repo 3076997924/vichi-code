@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vichi-酒店分类</title>
+    <!-- 引入favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入初始化样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入分类样式 -->
+    <link rel="stylesheet" href="./css/hotel_type.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_3788509_bx5rjehcoih.css?spm=a313x.7781069.1998910419.53&file=font_3788509_bx5rjehcoih.css">
+</head>
+
+<body>
+    <!-- 头部 header section  -->
+    <header class="header-section">
+        <div class="header-bar-section">
+            <div class="login">
+                <div class="login-icon">
+                    <img src="./images/icon-login.png" alt="">
+                </div>
+                <p>
+                    您好，请先 <a href="javascript:;">登陆</a> | <a href="javascript:;">注册</a>
+                </p>
+            </div>
+            <ul class="header-bar">
+                <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+            </ul>
+        </div>
+        <div class="header-bd-section">
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><span>首页</span></a></li>
+                    <li><a href="./journey.html"><span>旅程</span></a></li>
+                    <li class="current"><a href="./hotel.html"><span>酒店</span></a></li>
+                    <li><a href="javascript:;"><span>机票</span></a></li>
+                    <li><a href="javascript:;"><span>定制路线</span></a></li>
+                    <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                    <li><a href="javascript:;"><span>会员中心</span></a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-links">
+                <div class="mobile-btns">
+                    <div class="mobile-wrap">
+                        <div class="mobile-title">
+                            我的账号
+                            <span class="iconfont icon-sort" id="closeMobile"></span>
+                        </div>
+                        <div class="login-mobile">
+                            <a href="">登陆</a>
+                        </div>
+                        <div class="register-mobile">
+                            <a href="">注册</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-mobile">
+                    <div class="mobile-wrap">
+                        <li class="current"><a href="index.html"><span>首页</span></a></li>
+                        <li><a href="./journey.html"><span>旅程</span></a></li>
+                        <li><a href="javascript:;"><span>酒店</span></a></li>
+                        <li><a href="javascript:;"><span>机票</span></a></li>
+                        <li><a href="javascript:;"><span>定制路线</span></a></li>
+                        <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                        <li><a href="javascript:;"><span>会员中心</span></a></li>
+                    </div>
+                </ul>
+                <div class="other-links-mobile">
+                    <div class="mobile-wrap">
+                        <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-mobile-btn">
+                <span class="iconfont icon-sort" id="openMobile"></span>
+            </div>
+            <div class="compare">
+                <img src="./images/PK.png" alt="" class="pk">
+                <img src="./images/compare.png" alt="" class="com-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- banner区域 -->
+    <section class="ban-section"></section>
+
+    <!-- 关键词区域 -->
+    <section class="keywords-section">
+        <div class="banner">
+            <div class="backLast">
+                <a href="./hotel.html"><span class="iconfont icon-zuojiantou"></span>返回上一页</a>
+            </div>
+            <div class="keywords-theme">
+                <span class="theme-title">星级:</span>
+                <i class="current">不限</i>
+                <i>一星</i>
+                <i>二星</i>
+                <i>三星</i>
+                <i>四星</i>
+                <i>五星</i>
+            </div>
+            <div class="keywords-city">
+                <span class="city-title">区域:</span>
+                <i class="current">不限</i>
+                <i>美溪海滩</i>
+                <i>巴拿山</i>
+                <i>山水海滩</i>
+                <i>龙桥</i>
+                <i>山茶半岛</i>
+                <i>福美</i>
+                <i>和海</i>
+                <i>会安古城</i>
+                <i>岘港国际机场</i>
+                <i>韩江</i>
+            </div>
+            <div class="kewords-type">
+                <span class="type-title">类型:</span>
+                <i class="current">不限</i>
+                <i>度假村</i>
+                <i>别墅</i>
+                <i>酒店</i>
+                <i>公寓</i>
+                <i>旅馆</i>
+            </div>
+            <div class="keywords-price">
+                <span class="price-title">价格:</span>
+                <i class="current">不限</i>
+                <i>2500以下</i>
+                <i>3000-4000</i>
+                <i>5000-6000</i>
+                <i>6000-7000</i>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 分类区域 -->
+    <section class="typeList-section">
+        <div class="banner">
+            <div class="typeList">
+                <div class="typeItem">
+                    <div class="result-img">
+                        <a href="./hotel_detail.html">
+                            <img src="./images/hotel/type1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="result-info">
+                        <h4 class="result-title">
+                            河内广场大酒店(Grand Plaza Hanoi Hotel)
+                        </h4>
+                        <div class="result-msg">
+                            <div class="result-review">
+                                <span class="iconfont icon-yanjing"></span>
+                                <i>浏览人数:999+</i>
+                            </div>
+                            <div class="result-location">
+                                <span class="iconfont icon-daohangdizhi"></span>
+                                <i>越南,岘港,山茶郡,36 - 38Lam Hoanh Street,Phuo ...</i>
+                            </div>
+                        </div>
+                        <div class="result-star">
+                            <i>星级:</i>
+                            <div class="stars">
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                            </div>
+                            |
+                            <span class="score">评分: <em>9.8分</em></span>
+                        </div>
+                        <div class="result-package">
+                            <div class="result-package-title">
+                                组合套餐:
+                            </div>
+                            <div class="result-package-items">
+                                <div class="result-package-item">
+                                    <p>Lang Co Yen Binh 3N2D | 机票 + 带私人泳池的别墅 + 早餐 + 机场接送</p>
+                                    <div class="result-package-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                                <div class="result-package-item">
+                                    <p>Lang Co Yen Binh 3N2D | 机票 + 带私人泳池的别墅 + 早餐 + 晚餐 + 机场接送</p>
+                                    <div class="result-package-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-comment-num">
+                            4801条评论
+                        </div>
+                    </div>
+                </div>
+                <div class="typeItem">
+                    <div class="result-img">
+                        <a href="./hotel_detail.html">
+                            <img src="./images/hotel/type2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="result-info">
+                        <h4 class="result-title">
+                            岘港曼迪拉海滩酒店(Mandila Beach Hotel Danang)
+                        </h4>
+                        <div class="result-msg">
+                            <div class="result-review">
+                                <span class="iconfont icon-yanjing"></span>
+                                <i>浏览人数:999+</i>
+                            </div>
+                            <div class="result-location">
+                                <span class="iconfont icon-daohangdizhi"></span>
+                                <i>越南,岘港,山茶郡,36 - 38Lam Hoanh Street,Phuo ...</i>
+                            </div>
+                        </div>
+                        <div class="result-star">
+                            <i>星级:</i>
+                            <div class="stars">
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                            </div>
+                            |
+                            <span class="score">评分: <em>9.8分</em></span>
+                        </div>
+                        <div class="result-house">
+                            <div class="result-house-title">
+                                房间床型:
+                            </div>
+                            <div class="result-house-items">
+                                <div class="result-house-item">
+                                    <p>城景高级双人房| 1张宽 > 1.81米特大床</p>
+                                    <div class="result-house-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                                <div class="result-house-item">
+                                    <p>总统套房|1张特大床和2张特大床</p>
+                                    <div class="result-house-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-comment-num">
+                            2900条评论
+                        </div>
+                    </div>
+                </div>
+                <div class="typeItem">
+                    <div class="result-img">
+                        <a href="./hotel_detail.html">
+                            <img src="./images/hotel/type3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="result-info">
+                        <h4 class="result-title">
+                            河内广场大酒店(Grand Plaza Hanoi Hotel)
+                        </h4>
+                        <div class="result-msg">
+                            <div class="result-review">
+                                <span class="iconfont icon-yanjing"></span>
+                                <i>浏览人数:999+</i>
+                            </div>
+                            <div class="result-location">
+                                <span class="iconfont icon-daohangdizhi"></span>
+                                <i>越南,岘港,山茶郡,36 - 38Lam Hoanh Street,Phuo ...</i>
+                            </div>
+                        </div>
+                        <div class="result-star">
+                            <i>星级:</i>
+                            <div class="stars">
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                            </div>
+                            |
+                            <span class="score">评分: <em>9.8分</em></span>
+                        </div>
+                        <div class="result-package">
+                            <div class="result-package-title">
+                                组合套餐:
+                            </div>
+                            <div class="result-package-items">
+                                <div class="result-package-item">
+                                    <p>Lang Co Yen Binh 3N2D | 机票 + 带私人泳池的别墅 + 早餐 + 机场接送</p>
+                                    <div class="result-package-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                                <div class="result-package-item">
+                                    <p>Lang Co Yen Binh 3N2D | 机票 + 带私人泳池的别墅 + 早餐 + 晚餐 + 机场接送</p>
+                                    <div class="result-package-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-comment-num">
+                            4801条评论
+                        </div>
+                    </div>
+                </div>
+                <div class="typeItem">
+                    <div class="result-img">
+                        <a href="./hotel_detail.html">
+                            <img src="./images/hotel/type4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="result-info">
+                        <h4 class="result-title">
+                            岘港曼迪拉海滩酒店(Mandila Beach Hotel Danang)
+                        </h4>
+                        <div class="result-msg">
+                            <div class="result-review">
+                                <span class="iconfont icon-yanjing"></span>
+                                <i>浏览人数:999+</i>
+                            </div>
+                            <div class="result-location">
+                                <span class="iconfont icon-daohangdizhi"></span>
+                                <i>越南,岘港,山茶郡,36 - 38Lam Hoanh Street,Phuo ...</i>
+                            </div>
+                        </div>
+                        <div class="result-star">
+                            <i>星级:</i>
+                            <div class="stars">
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                            </div>
+                            |
+                            <span class="score">评分: <em>9.8分</em></span>
+                        </div>
+                        <div class="result-house">
+                            <div class="result-house-title">
+                                房间床型:
+                            </div>
+                            <div class="result-house-items">
+                                <div class="result-house-item">
+                                    <p>城景高级双人房| 1张宽 > 1.81米特大床</p>
+                                    <div class="result-house-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                                <div class="result-house-item">
+                                    <p>总统套房|1张特大床和2张特大床</p>
+                                    <div class="result-house-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-comment-num">
+                            2900条评论
+                        </div>
+                    </div>
+                </div>
+                <div class="typeItem">
+                    <div class="result-img">
+                        <a href="./hotel_detail.html"><img src="./images/hotel/type5.jpg" alt=""></a>
+                    </div>
+                    <div class="result-info">
+                        <h4 class="result-title">
+                            岘港曼迪拉海滩酒店(Mandila Beach Hotel Danang)
+                        </h4>
+                        <div class="result-msg">
+                            <div class="result-review">
+                                <span class="iconfont icon-yanjing"></span>
+                                <i>浏览人数:999+</i>
+                            </div>
+                            <div class="result-location">
+                                <span class="iconfont icon-daohangdizhi"></span>
+                                <i>越南,岘港,山茶郡,36 - 38Lam Hoanh Street,Phuo ...</i>
+                            </div>
+                        </div>
+                        <div class="result-star">
+                            <i>星级:</i>
+                            <div class="stars">
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                                <span class="iconfont icon-wujiaoxing"></span>
+                            </div>
+                            |
+                            <span class="score">评分: <em>9.8分</em></span>
+                        </div>
+                        <div class="result-house">
+                            <div class="result-house-title">
+                                房间床型:
+                            </div>
+                            <div class="result-house-items">
+                                <div class="result-house-item">
+                                    <p>城景高级双人房| 1张宽 > 1.81米特大床</p>
+                                    <div class="result-house-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                                <div class="result-house-item">
+                                    <p>总统套房|1张特大床和2张特大床</p>
+                                    <div class="result-house-reserve">
+                                        立即预订
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-comment-num">
+                            2900条评论
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分页器 -->
+        <div class="pagenation"></div>
+    </section>
+
+
+    <!-- 底部区域 -->
+    <footer class="footer-section">
+        <div class="footer-hd">
+            <div class="banner">
+                <ul class="ft-nav">
+                    <li><a href="./journey.html">旅程</a></li>
+                    <li><a href="javascript:;">酒店</a></li>
+                    <li><a href="javascript:;">机票</a></li>
+                    <li><a href="javascript:;">定制路线</a></li>
+                    <li><a href="javascript:;">游记攻略</a></li>
+                    <li><a href="javascript:;">会员中心</a></li>
+                </ul>
+                <div class="ft-top">
+                    返回顶部
+                    <img src="./images/icon_back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bd">
+            <div class="banner">
+                <div class="footer-msg">
+                    <div class="footer-msg-left">
+                        <div class="footer-msg-notice">
+                            金莲国旅: <br>
+                            对于中国游客而言，以及对于越来越多的世界各地的游客而言， 携程是其可值得信赖的旅行平台，用户可以通过携程的平台进行任何类型的旅行预订，包括从目的地内活动、周末短假及短途旅行，到跨境..
+                        </div>
+                        <div class="footer-msg-contact">
+                            联系我们: <br>
+                            <p>服务热线：020-226231</p>
+                            <p>合作热线：020-115423</p>
+                            <p>联系邮箱：21542512@qq.com</p>
+                            <p>公司地址：广东省广州市天河区龙洞森林公园环山路</p>
+                        </div>
+                    </div>
+                    <div class="footer-msg-right">
+                        <div class="erweicode">
+                            <div class="wechat">
+                                <p>—— 微信客服 ——</p>
+                                <img src="./images/erweicode1.png" alt="">
+                            </div>
+                            <div class="official">
+                                <p>—— 公众号 ——</p>
+                                <img src="./images/erweicode2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobile">咨询电话: <span>020-123456</span> 或 <span>020-326531</span></div>
+                    </div>
+                </div>
+                <ul class="footer-platform">
+                    <li>腾讯开放平台</li>
+                    <li>全球速卖通</li>
+                    <li>腾讯微云</li>
+                    <li>腾讯会议</li>
+                    <li>阿里云计算</li>
+                    <li>腾讯优图</li>
+                    <li>大麦网</li>
+                    <li>腾讯文档</li>
+                    <li>阿里巴巴集团</li>
+                    <li>腾讯企点</li>
+                    <li>网商银行</li>
+                    <li>阿里妈妈</li>
+                    <li>阿里通信</li>
+                    <li>阿里影业</li>
+                    <li>阿里健康</li>
+                    <li>阿里安全</li>
+                </ul>
+                <div class="footer-record">
+                    浙ICP备2012000356号-3
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入 jquery js -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- 引入 common js -->
+    <script src="./js/common.js"></script>
+    <script src="./js/pagenation.js"></script>
+    <script src="./js/hotel/hotel_type.js"></script>
+</body>
+
+</html>

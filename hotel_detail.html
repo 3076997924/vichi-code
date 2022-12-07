@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vichi-酒店详情</title>
+    <!-- 引入favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入初始化样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入酒店详样式 -->
+    <link rel="stylesheet" href="./css/hotel_detail.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_3788509_jtrkshz7ioq.css?spm=a313x.7781069.1998910419.53&file=font_3788509_jtrkshz7ioq.css">
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <style>
+        .video-js .vjs-big-play-button {
+            font-size: 2.5em;
+            line-height: 2.3em;
+            height: 2.5em;
+            width: 2.5em;
+            -webkit-border-radius: 2.5em;
+            -moz-border-radius: 2.5em;
+            border-radius: 2.5em;
+            background-color: #73859f;
+            background-color: rgba(115, 133, 159, .5);
+            border-width: 0.15em;
+            margin-top: -1.25em;
+            margin-left: -1.75em;
+        }
+
+        /* 中间的播放箭头 */
+        .vjs-big-play-button .vjs-icon-placeholder {
+            font-size: 1.63em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 头部 header section  -->
+    <header class="header-section">
+        <div class="header-bar-section">
+            <div class="login">
+                <div class="login-icon">
+                    <img src="./images/icon-login.png" alt="">
+                </div>
+                <p>
+                    您好，请先 <a href="javascript:;">登陆</a> | <a href="javascript:;">注册</a>
+                </p>
+            </div>
+            <ul class="header-bar">
+                <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+            </ul>
+        </div>
+        <div class="header-bd-section">
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><span>首页</span></a></li>
+                    <li><a href="./journey.html"><span>旅程</span></a></li>
+                    <li class="current"><a href="./hotel.html"><span>酒店</span></a></li>
+                    <li><a href="javascript:;"><span>机票</span></a></li>
+                    <li><a href="javascript:;"><span>定制路线</span></a></li>
+                    <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                    <li><a href="javascript:;"><span>会员中心</span></a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-links">
+                <div class="mobile-btns">
+                    <div class="mobile-wrap">
+                        <div class="mobile-title">
+                            我的账号
+                            <span class="iconfont icon-sort" id="closeMobile"></span>
+                        </div>
+                        <div class="login-mobile">
+                            <a href="">登陆</a>
+                        </div>
+                        <div class="register-mobile">
+                            <a href="">注册</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-mobile">
+                    <div class="mobile-wrap">
+                        <li class="current"><a href="index.html"><span>首页</span></a></li>
+                        <li><a href="./journey.html"><span>旅程</span></a></li>
+                        <li><a href="javascript:;"><span>酒店</span></a></li>
+                        <li><a href="javascript:;"><span>机票</span></a></li>
+                        <li><a href="javascript:;"><span>定制路线</span></a></li>
+                        <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                        <li><a href="javascript:;"><span>会员中心</span></a></li>
+                    </div>
+                </ul>
+                <div class="other-links-mobile">
+                    <div class="mobile-wrap">
+                        <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-mobile-btn">
+                <span class="iconfont icon-sort" id="openMobile"></span>
+            </div>
+            <div class="compare">
+                <img src="./images/PK.png" alt="" class="pk">
+                <img src="./images/compare.png" alt="" class="com-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- 链接条区域 -->
+    <section class="linksbar-section">
+        <div class="wrap">
+            <div class="linksbar">
+                <a href="index.html" class="backHome"><span class="iconfont icon-zuojiantou"></span> 首页</a> >
+                <a href="./hotel.html" class="backJourney">酒店</a> >
+                <a href="./hotel_detail.html" class="currentLink">梦想公寓式酒店(Dream Hotel and Apartment)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 详细介绍区域 -->
+    <section class="detailDes-section">
+        <div class="banner">
+            <div class="detailDes">
+                <div class="detailDes-hd">
+                    <h4 class="Des-title">萨拉岘港海滩酒店(Sala Danang Beach Hotel)</h4>
+                    <div class="Des-right">
+                        <div class="Des-stars">
+                            星级: <span class="iconfont icon-wujiaoxing"></span>
+                            <span class="iconfont icon-wujiaoxing"></span>
+                            <span class="iconfont icon-wujiaoxing"></span>
+                            <span class="iconfont icon-wujiaoxing"></span>
+                            <span class="iconfont icon-wujiaoxing"></span>
+                        </div> |
+                        <div class="Des-score">
+                            评分: <span>9.8分</span>
+                        </div>
+                        <div class="Des-collection">
+                            <span class="iconfont icon-kongxinwujiaoxing"></span>
+                            <span class="iconfont icon-wujiaoxing" style="display: none;"></span>
+                            收藏
+                        </div>
+                        <div class="Des-review">
+                            现在预定
+                        </div>
+                    </div>
+                </div>
+                <div class="detailDes-other">
+                    <div class="Des-browse">
+                        <span class="iconfont icon-yanjing"></span>
+                        浏览人数:<i>999+</i>
+                    </div>
+                    <div class="Des-location">
+                        <span class="iconfont icon-daohangdizhi"></span>
+                        <i>越南，岘港，山茶郡，36 - 38 Lam Hoanh Street, Phuoc My Ward, Son Tra District, Da Nang | 位于：海滨大道 |
+                            类型：度假村</i>
+                    </div>
+                </div>
+                <div class="detailDes-play">
+                    <div class="detailDes-video">
+                        <video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto"
+                            poster="./images/hotel1.jpg" data-setup="{}">
+                            <source src="./video/detail.mp4" type="video/mp4" />
+                            <source src="./video/detail.mp4" type="video/webm" />
+                        </video>
+                        <div class="video-title">
+                            <span class="iconfont icon-arrow_right_fat"></span>
+                            <span class="iconfont icon-arrow_right_fat shadowicon"></span>
+                            <p>Sala Danang Beach Hotel | 1 08.99亿客人</p>
+                            <span class="iconfont icon-arrow_left_fat shadowicon"></span>
+                            <span class="iconfont icon-arrow_left_fat"></span>
+                        </div>
+                    </div>
+                    <div class="detailDes-imgs">
+                        <div class="Des-img">
+                            <img src="./images/hotel/Des-img1.jpg" alt="">
+                        </div>
+                        <div class="Des-img">
+                            <img src="./images/hotel/Des-img2.jpg" alt="">
+                        </div>
+                        <div class="Des-img">
+                            <img src="./images/hotel/Des-img3.jpg" alt="">
+                        </div>
+                        <div class="Des-img">
+                            <img src="./images/hotel/Des-img4.jpg" alt="">
+                        </div>
+                        <div class="Des-img">
+                            <img src="./images/hotel/Des-img5.jpg" alt="">
+                        </div>
+                        <div class="Des-img">
+                            <img src="./images/hotel/Des-img6.jpg" alt="">
+                            <div class="mask"></div>
+                            <p>查看所有192张照片</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailDes-read">
+                    <p>酒店说明：萨拉岘港海滩酒店面朝着名的My Khe海滩，距离汉江和岘港市中心仅有2公里。 酒店提供162间享有大海和市中心景致的客房，2间餐着名的My Khe海滩，距离港海滩酒店面朝着名的My K
+                    </p>
+                    <div class="read-btn">
+                        <a href="./hotel_intro.html">阅读详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 列表区域 -->
+    <section class="detailList-section">
+        <div class="banner">
+            <!-- 详情列表锚点区域 -->
+            <ul class="detail_nav">
+                <li><a href="#reserve_hotel">预定住宿</a></li>
+                <li><a href="#comment_hotel">用户点评</a></li>
+                <li><a href="#notice_hotel">预定须知</a></li>
+                <li><a href="#relation_hotel">关联酒店</a></li>
+            </ul>
+            <!-- 详情列表内容区域 -->
+            <div class="detail_content">
+                <div class="detail_content_left">
+                    <div class="detail_content_title">
+                        <h4>Sala Danang Beach Hote | 机票 + 带私人泳池的别墅 + 早餐 + 机场接送</h4>
+                    </div>
+                    <div class="detail_content_list">
+                        <div class="detail_content_list_title">
+                            <h5>组合包括:</h5>
+                        </div>
+                        <p class="detail_content_item">在Villa，通过iVIVU.COM获得价值200万的手提箱（*）
+                        </p>
+                        <p class="detail_content_item">-带07公斤手提行李的岘港往返机票
+                        </p>
+                        <p class="detail_content_item">-根据度假村的时间表前往岘港国际机场的机场接送（**）
+                        </p>
+                        <p class="detail_content_item">- 自制早餐按国际标准选择，多种亚欧风味Water Court 餐厅的美食
+                        </p>
+                        <p class="detail_content_item">- 在度假村内的绿树下放松骑自行车
+                        </p>
+                        <p class="detail_content_item">- 在美丽的 Lang Co 湾的蔚蓝大海和原始白色沙滩上自由搏斗
+                        </p>
+                        <p class="detail_content_item">- 在 Angsana Lang Co 度假村周围的游泳池尽情玩乐，长达 300 米，并配有按摩浴缸
+                        </p>
+                        <p class="detail_content_item">-亲身体验海上游戏和活动，如水肺潜水，看看生动的海底世界，风帆冲浪，皮划艇和许多其他令人兴奋的海上活动。其他客人（视天气情况而定）
+                        </p>
+                        <p class="detail_content_item">请联系顾问了解更多详情
+                        </p>
+                        <p class="detail_content_item">从海滩泳池别墅房型及以上，客户将享受汽车优惠 根据航班时刻表私人接送到岘港机场或顺化机场（01 航班/预订）
+                        </p>
+                        <div class="detail_content_list_title">
+                            <h5>条件适用:</h5>
+                        </div>
+                        <p class="detail_content_item">- 最少预订02位客人/房间
+                        </p>
+                        <p class="detail_content_item">- 适用于持有临时居留卡的越南及外籍客人
+                        </p>
+                        <p class="detail_content_item">- 至少在入住前 7 天预订的套餐
+                        </p>
+                        <p class="detail_content_item">- 周五、周六和 9 月 2 日周末的附加费
+                        </p>
+                        <p class="detail_content_item">- 逗留时间：至 2022 年 9 月 30 日结束
+                        </p>
+                    </div>
+                </div>
+                <div class="detail_content_right">
+                    <div class="detail-con1">
+                        <div class="detail_right_hd">
+                            <p>从<span>富国岛</span>出发</p>
+                            <i>查看出发时间表</i>
+                        </div>
+                        <div class="detail_right_con">
+                            <div class="detail_time_item">
+                                <span>08.01-08.30</span><i>¥2100</i>
+                                <em></em>
+                                <div class="item_line"></div>
+                            </div>
+                            <div class="detail_time_item">
+                                <span>09.01-09.30</span><i>¥1800</i>
+                                <em></em>
+                            </div>
+                            <div class="detail-coupon">
+                                <div class="detail_coupon_item">
+                                    <span>券</span>
+                                    9月21日出发可享减99元优惠
+                                </div>
+                                <div class="detail_coupon_item">
+                                    <span>券</span>
+                                    9月22日出发可享减160元优惠
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail_con2">
+                        <div class="detail_right_hd">
+                            <p>从<span>大叻</span>出发</p>
+                            <i>查看出发时间表</i>
+                        </div>
+                        <div class="detail_right_con">
+                            <div class="detail_time_item">
+                                <span>09.30-10.00</span><i>¥1980</i>
+                                <em></em>
+                                <div class="item_line"></div>
+                            </div>
+                            <div class="detail_time_item">
+                                <span>11.00-12.00</span><i>¥1720</i>
+                                <em></em>
+                            </div>
+                            <div class="detail-coupon">
+                                <div class="detail_coupon_item">
+                                    <span>券</span>
+                                    9月25日出发可享减99元优惠
+                                </div>
+                                <div class="detail_coupon_item">
+                                    <span>券</span>
+                                    9月26日出发可享减160元优惠
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-content-reserve">
+                        立即预订
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail_content">
+                <div class="detail_content_left">
+                    <div class="detail_content_title">
+                        <h4>Sala Danang Beach Hote | 机票 + 带私人泳池的别墅 + 早餐 + 中餐 + 晚餐 + 机场接送</h4>
+                    </div>
+                    <div class="detail_content_list">
+                        <div class="detail_content_list_title">
+                            <h5>组合包括:</h5>
+                        </div>
+                        <p class="detail_content_item">在Villa，通过iVIVU.COM获得价值200万的手提箱（*）
+                        </p>
+                        <p class="detail_content_item">-带07公斤手提行李的岘港往返机票
+                        </p>
+                        <p class="detail_content_item">-根据度假村的时间表前往岘港国际机场的机场接送（**）
+                        </p>
+                        <p class="detail_content_item">- 自制早餐按国际标准选择，多种亚欧风味Water Court 餐厅的美食
+                        </p>
+                        <p class="detail_content_item">- 在度假村内的绿树下放松骑自行车
+                        </p>
+                        <p class="detail_content_item">- 在美丽的 Lang Co 湾的蔚蓝大海和原始白色沙滩上自由搏斗
+                        </p>
+                        <p class="detail_content_item">- 在 Angsana Lang Co 度假村周围的游泳池尽情玩乐，长达 300 米，并配有按摩浴缸
+                        </p>
+                        <p class="detail_content_item">-亲身体验海上游戏和活动，如水肺潜水，看看生动的海底世界，风帆冲浪，皮划艇和许多其他令人兴奋的海上活动。其他客人（视天气情况而定）
+                        </p>
+                        <p class="detail_content_item">请联系顾问了解更多详情
+                        </p>
+                        <p class="detail_content_item">从海滩泳池别墅房型及以上，客户将享受汽车优惠 根据航班时刻表私人接送到岘港机场或顺化机场（01 航班/预订）
+                        </p>
+                        <div class="detail_content_list_title">
+                            <h5>条件适用:</h5>
+                        </div>
+                        <p class="detail_content_item">- 最少预订02位客人/房间
+                        </p>
+                        <p class="detail_content_item">- 适用于持有临时居留卡的越南及外籍客人
+                        </p>
+                        <p class="detail_content_item">- 至少在入住前 7 天预订的套餐
+                        </p>
+                        <p class="detail_content_item">- 周五、周六和 9 月 2 日周末的附加费
+                        </p>
+                        <p class="detail_content_item">- 逗留时间：至 2022 年 9 月 30 日结束
+                        </p>
+                    </div>
+                </div>
+                <div class="detail_content_right">
+                    <div class="detail-con1">
+                        <div class="detail_right_hd">
+                            <p>从<span>胡志明市</span>出发</p>
+                            <i>查看出发时间表</i>
+                        </div>
+                        <div class="detail_right_con">
+                            <div class="detail_time_item">
+                                <span>08.01-08.30</span><i>¥2100</i>
+                                <em></em>
+                                <div class="item_line"></div>
+                            </div>
+                            <div class="detail_time_item">
+                                <span>09.01-09.30</span><i>¥1800</i>
+                                <em></em>
+                            </div>
+                            <div class="detail-coupon">
+                                <div class="detail_coupon_item">
+                                    <span>券</span>
+                                    9月21日出发可享减99元优惠
+                                </div>
+                                <div class="detail_coupon_item">
+                                    <span>券</span>
+                                    9月22日出发可享减160元优惠
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail_con2">
+                        <div class="detail_right_hd">
+                            <p>从<span>岘港</span>出发</p>
+                            <i>查看出发时间表</i>
+                        </div>
+                        <div class="detail_right_con">
+                            <div class="detail_time_item">
+                                <span>09.30-10.00</span><i>¥1980</i>
+                                <em></em>
+                                <div class="item_line"></div>
+                            </div>
+                            <div class="detail_time_item">
+                                <span>11.00-12.00</span><i>¥1720</i>
+                                <em></em>
+                            </div>
+                            <div class="detail-coupon">
+                                <div class="detail_coupon_item">
+                                    <span>券</span>
+                                    9月25日出发可享减99元优惠
+                                </div>
+                                <div class="detail_coupon_item">
+                                    <span>券</span>
+                                    9月26日出发可享减160元优惠
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-content-reserve">
+                        立即预订
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 锚点区域 -->
+        <section class="anchorPoint-section">
+            <!-- 详情列表预定住宿区域 -->
+            <div class="reserve_hotel" id="reserve_hotel">
+                <div class="banner">
+                    <div class="reserve-hotel-item">
+                        <div class="reserve-item-img">
+                            <img src="./images/hotel/hotel-res1.jpg" alt="">
+                        </div>
+                        <div class="reserve-item-right">
+                            <div class="reserve-hotel-item-title">
+                                <h4>豪华双床房</h4>
+                            </div>
+                            <div class="reserve-hotel-tags">
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    独立浴缸和淋浴
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    吹风机
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    拖鞋
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    书桌
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    免费洗漱用品
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    熨衣设备
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    唤醒服务
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    滚筒式烘干机
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    电烧水壶
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    有线频道
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    衣柜/衣服
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    电视
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    空调
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    迷你吧
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    免费WiFi
+                                </div>
+                            </div>
+                            <div class="reserve-hotel-compare">
+                                <div class="hotel-compare-hd">
+                                    <li>产品名称</li>
+                                    <li>床型</li>
+                                    <li>可在人数</li>
+                                    <li>是否含早</li>
+                                    <li>今日价格</li>
+                                </div>
+                                <div class="hotel-compare-item">
+                                    <ul>
+                                        <li>双床房</li>
+                                        <li>大床房</li>
+                                        <li>2人</li>
+                                        <li>2份早餐</li>
+                                        <li>¥339</li>
+                                    </ul>
+                                    <div class="compare-reserve">
+                                        <a href="./hotel_reserve.html">立即预订</a>
+                                    </div>
+                                    <div class="compare-btn">
+                                        加入对比
+                                    </div>
+                                </div>
+                                <div class="hotel-compare-item">
+                                    <ul>
+                                        <li>双床房</li>
+                                        <li>特大床房</li>
+                                        <li>2人</li>
+                                        <li>2份早餐</li>
+                                        <li>¥362</li>
+                                    </ul>
+                                    <div class="compare-reserve">
+                                        <a href="./hotel_reserve.html">立即预订</a>
+                                    </div>
+                                    <div class="compare-btn">
+                                        加入对比
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reserve-hotel-item">
+                        <div class="reserve-item-img">
+                            <img src="./images/hotel/hotel-res2.jpg" alt="">
+                        </div>
+                        <div class="reserve-item-right">
+                            <div class="reserve-hotel-item-title">
+                                <h4>海滨钻石套房</h4>
+                            </div>
+                            <div class="reserve-hotel-tags">
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    独立浴缸和淋浴
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    吹风机
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    拖鞋
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    书桌
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    免费洗漱用品
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    熨衣设备
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    唤醒服务
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    滚筒式烘干机
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    电烧水壶
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    有线频道
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    衣柜/衣服
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    电视
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    空调
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    迷你吧
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    免费WiFi
+                                </div>
+                            </div>
+                            <div class="reserve-hotel-compare">
+                                <div class="hotel-compare-hd">
+                                    <li>产品名称</li>
+                                    <li>床型</li>
+                                    <li>可在人数</li>
+                                    <li>是否含早</li>
+                                    <li>今日价格</li>
+                                </div>
+                                <div class="hotel-compare-item">
+                                    <ul>
+                                        <li>钻石套房</li>
+                                        <li>大床房</li>
+                                        <li>2人</li>
+                                        <li>2份早餐</li>
+                                        <li>¥339</li>
+                                    </ul>
+                                    <div class="compare-reserve">
+                                        <a href="./hotel_reserve.html">立即预订</a>
+                                    </div>
+                                    <div class="compare-btn">
+                                        加入对比
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reserve-hotel-item">
+                        <div class="reserve-item-img">
+                            <img src="./images/hotel/hotel-res3.jpg" alt="">
+                        </div>
+                        <div class="reserve-item-right">
+                            <div class="reserve-hotel-item-title">
+                                <h4>海滨特大床房</h4>
+                            </div>
+                            <div class="reserve-hotel-tags">
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    独立浴缸和淋浴
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    吹风机
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    拖鞋
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    书桌
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    免费洗漱用品
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    熨衣设备
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    唤醒服务
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    滚筒式烘干机
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    电烧水壶
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    有线频道
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    衣柜/衣服
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    电视
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    空调
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    迷你吧
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    免费WiFi
+                                </div>
+                            </div>
+                            <div class="reserve-hotel-compare">
+                                <div class="hotel-compare-hd">
+                                    <li>产品名称</li>
+                                    <li>床型</li>
+                                    <li>可在人数</li>
+                                    <li>是否含早</li>
+                                    <li>今日价格</li>
+                                </div>
+                                <div class="hotel-compare-item">
+                                    <ul>
+                                        <li>特大床房</li>
+                                        <li>大床房</li>
+                                        <li>2人</li>
+                                        <li>2份早餐</li>
+                                        <li>¥339</li>
+                                    </ul>
+                                    <div class="compare-reserve">
+                                        <a href="./hotel_reserve.html">立即预订</a>
+                                    </div>
+                                    <div class="compare-btn">
+                                        加入对比
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reserve-hotel-item">
+                        <div class="reserve-item-img">
+                            <img src="./images/hotel/hotel-res4.jpg" alt="">
+                        </div>
+                        <div class="reserve-item-right">
+                            <div class="reserve-hotel-item-title">
+                                <h4>一卧室公寓</h4>
+                            </div>
+                            <div class="reserve-hotel-tags">
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    独立浴缸和淋浴
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    吹风机
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    拖鞋
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    书桌
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    免费洗漱用品
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    熨衣设备
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    唤醒服务
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    滚筒式烘干机
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    电烧水壶
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    有线频道
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    衣柜/衣服
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    电视
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    空调
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    迷你吧
+                                </div>
+                                <div class="hotel-tag">
+                                    <span class="iconfont icon-duihao"></span>
+                                    免费WiFi
+                                </div>
+                            </div>
+                            <div class="reserve-hotel-compare">
+                                <div class="hotel-compare-hd">
+                                    <li>产品名称</li>
+                                    <li>床型</li>
+                                    <li>可在人数</li>
+                                    <li>是否含早</li>
+                                    <li>今日价格</li>
+                                </div>
+                                <div class="hotel-compare-item">
+                                    <ul>
+                                        <li>一卧室公寓</li>
+                                        <li>大床房</li>
+                                        <li>2人</li>
+                                        <li>2份早餐</li>
+                                        <li>¥339</li>
+                                    </ul>
+                                    <div class="compare-reserve">
+                                        <a href="./hotel_reserve.html">立即预订</a>
+                                    </div>
+                                    <div class="compare-btn">
+                                        加入对比
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 详情用户点评区域 -->
+            <div class="comment_hotel" id="comment_hotel">
+                <div class="banner">
+                    <div class="comment-hotel-hd">
+                        <div class="comment-hotel-score">
+                            <span><i>9.8</i>分</span>
+                            <em>整体</em>
+                        </div>
+                        <div class="comment-hotel-progress">
+                            <div class="comment-progress-item">
+                                <span>位置:</span>
+                                <div class="progress">
+                                    <div class="progress-cur">
+
+                                    </div>
+                                </div>
+                                <i>9.3</i>
+                            </div>
+                            <div class="comment-progress-item">
+                                <span>服务:</span>
+                                <div class="progress">
+                                    <div class="progress-cur">
+
+                                    </div>
+                                </div>
+                                <i>8.5</i>
+                            </div>
+                            <div class="comment-progress-item">
+                                <span>整洁:</span>
+                                <div class="progress">
+                                    <div class="progress-cur">
+
+                                    </div>
+                                </div>
+                                <i>9.1</i>
+                            </div>
+                            <div class="comment-progress-item">
+                                <span>舒适</span>
+                                <div class="progress">
+                                    <div class="progress-cur">
+
+                                    </div>
+                                </div>
+                                <i>8.9</i>
+                            </div>
+                            <div class="comment-progress-item">
+                                <span>设施:</span>
+                                <div class="progress">
+                                    <div class="progress-cur">
+
+                                    </div>
+                                </div>
+                                <i>9.0</i>
+                            </div>
+                            <div class="comment-progress-item">
+                                <span>环境:</span>
+                                <div class="progress">
+                                    <div class="progress-cur">
+
+                                    </div>
+                                </div>
+                                <i>9.2</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-hotel-bd">
+                        <div class="comment-hd">
+                            <h3>用户点评(218条)</h3>
+                            <a href="./hotel_comment.html">查看更多</a>
+                        </div>
+                        <div class="comment-bd">
+                            <div class="comment-item">
+                                <div class="comment-left">
+                                    <div class="comment-attr">
+                                        <img src="./images/user11.png" alt="">
+                                    </div>
+                                    <div class="comment-name">
+                                        浅草色根木
+                                    </div>
+                                </div>
+                                <div class="comment-right">
+                                    <div class="comment-time">
+                                        2022-07-27 17:01
+                                    </div>
+                                    <div class="comment-con">
+                                        富国岛适合休闲的地方，广州有直飞比较方便，而且免签，酒店有固定班车往返机场，离机场比较近，而且有班车去动物园和珍珠岛乐园，门口也有付费的旅游大巴去缆车，诺富特环境不错，早餐也挺好，而且早餐到早上十点半，酒店有免费的瑜伽课程，沙滩的小艇可以免费玩。
+                                    </div>
+                                    <div class="comment-imgs">
+                                        <img src="./images/user12.jpg" alt="">
+                                        <img src="./images/user13.jpg" alt="">
+                                        <img src="./images/user14.jpg" alt="">
+                                        <img src="./images/user15.jpg" alt="">
+                                        <img src="./images/user16.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-item">
+                                <div class="comment-left">
+                                    <div class="comment-attr">
+                                        <img src="./images/user21.png" alt="">
+                                    </div>
+                                    <div class="comment-name">
+                                        默默蓓
+                                    </div>
+                                </div>
+                                <div class="comment-right">
+                                    <div class="comment-time">
+                                        2022-04-20 11:00
+                                    </div>
+                                    <div class="comment-con">
+                                        酒店的硬件设施和服务态度都不错，虽然部分工作人员的英文不是太过关，但是总体上沟通还是可以实现的，而且耐心还是很值得表扬的。酒店自己的海滩也比较好，水质还算可以，清洁维护也比较到位。房间方面推荐别墅，性价比很高，比主楼的豪华房更有感觉。酒店位置以及周边交通确实偏僻了一点，但这是当前全岛发展刚起步造成的，以后一定会越来越好。由于挨着游乐场和动物园，而且有免费接送班车，如果带孩子来玩会是很方便的。
+                                    </div>
+                                    <div class="comment-imgs">
+                                        <img src="./images/user22.jpg" alt="">
+                                        <img src="./images/user23.jpg" alt="">
+                                        <img src="./images/user24.jpg" alt="">
+                                        <img src="./images/user25.jpg" alt="">
+                                        <img src="./images/user26.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-item">
+                                <div class="comment-left">
+                                    <div class="comment-attr">
+                                        <img src="./images/user31.png" alt="">
+                                    </div>
+                                    <div class="comment-name">
+                                        朱小鱼*1024
+                                    </div>
+                                </div>
+                                <div class="comment-right">
+                                    <div class="comment-time">
+                                        2022-02-11 10:00
+                                    </div>
+                                    <div class="comment-con">
+                                        富国岛适合休闲的地方，广州有直飞比较方便，而且免签，酒店有固定班车往返机场，离机场比较近，而且有班车去动物园和珍珠岛乐园，门口也有付费的旅游大巴去缆车，诺富特环境不错，早餐也挺好，而且早餐到早上十点半，酒店有免费的瑜伽课程，沙滩的小艇可以免费玩。
+                                    </div>
+                                    <div class="comment-imgs">
+                                        <img src="./images/user32.jpg" alt="">
+                                        <img src="./images/user33.jpg" alt="">
+                                        <img src="./images/user34.jpg" alt="">
+                                        <img src="./images/user35.jpg" alt="">
+                                        <img src="./images/user36.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 预定须知区域 -->
+            <div class="notice_hotel" id="notice_hotel">
+                <div class="banner">
+                    <div class="notice-title">
+                        <h4>预定须知</h4>
+                    </div>
+                    <div class="notice-con">
+                        <p class="notice-item">请注意，酒店提供免费接机服务。客人需使用特殊要求栏提前通知酒店其航班详情。
+                        </p>
+                        <p class="notice-item">客人每天都可免费使用泳池毛巾。</p>
+                        <p class="notice-item">客人在办理入住手续时须出示带照片的身份证件和信用卡。请注意：所有特殊要求均视住宿的供应情况而定，也可能收取额外费用。
+                        </p>
+                        <p class="notice-item">请您提前告知酒店您的预计抵达时间。您可以在预订时在“特殊要求”栏内注明，也可以直接联系住宿，订单确认信中附有联系方式。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 关联酒店区域 -->
+            <div class="relation_hotel" id="relation_hotel">
+                <div class="banner">
+                    <div class="relation-title">
+                        <h4>相关酒店</h4>
+                    </div>
+                    <div class="relation-con">
+                        <div class="relation-item">
+                            <img src="./images/hotel/hotel-about1.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="relation-msg">
+                                <h4>海安水疗海滩酒店</h4>
+                                <p>1560条点评</p>
+                            </div>
+                        </div>
+                        <div class="relation-item">
+                            <img src="./images/hotel/hotel-about2.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="relation-msg">
+                                <h4>TMS岘港海滩酒店</h4>
+                                <p>1560条点评</p>
+                            </div>
+                        </div>
+                        <div class="relation-item">
+                            <img src="./images/hotel/hotel-about3.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="relation-msg">
+                                <h4>岘港海滩巴利斯德利酒店</h4>
+                                <p>1560条点评</p>
+                            </div>
+                        </div>
+                        <div class="relation-item">
+                            <img src="./images/hotel/hotel-about4.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="relation-msg">
+                                <h4>岘港斯蒂娜马尔威斯海滨酒店</h4>
+                                <p>1560条点评</p>
+                            </div>
+                        </div>
+                        <div class="relation-item">
+                            <img src="./images/hotel/hotel-about5.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="relation-msg">
+                                <h4>岘港菲维特尔酒店</h4>
+                                <p>1560条点评</p>
+                            </div>
+                        </div>
+                        <div class="relation-item">
+                            <img src="./images/hotel/hotel-about6.jpg" alt="">
+                            <div class="mask"></div>
+                            <div class="relation-msg">
+                                <h4>西贡达拉特酒店</h4>
+                                <p>1560条点评</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- 时间表 -->
+    <div class="time-chart" style="display: none;">
+        <h3>查看出发时间表</h3>
+        <div class="time-chart-list">
+            <div class="calendar">
+                <div class="calendar-title">
+                    <a href="" id="pre"><span class="iconfont icon-left"></span></a>
+                    <h2 id="calendar-year">Year</h2>
+                    <h2 id="calendar-title">Month</h2>
+                    <a href="" id="next"><span class="iconfont icon-right"></span></a>
+                </div>
+
+                <div class="calendar-body">
+                    <div class="body-list">
+                        <ul>
+                            <li>周日</li>
+                            <li>周一</li>
+                            <li>周二</li>
+                            <li>周三</li>
+                            <li>周四</li>
+                            <li>周五</li>
+                            <li>周六</li>
+                        </ul>
+                    </div>
+                    <div class="darkgrey body-list">
+                        <ul id="days">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="time-chart-btns">
+            <div class="time-chart-back">返回</div>
+            <div class="time-chart-sure">确定</div>
+        </div>
+    </div>
+
+    <div class="detail-mask" style="display: none;"></div>
+
+    <!-- 组合需求预定 -->
+    <div class="com-reserve" style="display: none;">
+        <h3>组合需求预定</h3>
+        <div class="com-reserve-list">
+            <div class="com-reserve-item1 com-reserve-item">
+                <div class="com-reserve-birth">
+                    <p>出发日</p>
+                    <input type="text" class="com-input" placeholder="年/月/日">
+                </div>
+                <div class="com-reserve-number">
+                    <p>数量</p>
+                    <div class="com-number">
+                        <div class="com-reserve-adult">
+                            成人
+                            <button class="adult-dec">-</button>
+                            <span id="adult-num">1</span>
+                            <button class="adult-add">+</button>
+                        </div>
+                        <div class="com-reserve-child">
+                            儿童
+                            <button class="child-dec">-</button>
+                            <span id="child-num">1</span>
+                            <button class="child-add">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="com-reserve-item com-reserve-item2">
+                <p>出发地</p>
+                <div class="com-reserve-birloca">
+                    <div class="birloca-item">胡志明市</div>
+                    <div class="birloca-item current">河内</div>
+                </div>
+            </div>
+            <div class="com-reserve-item com-reserve-item3">
+                <div class="com-serve-name">
+                    <p>姓名<span>*</span></p>
+                    <input type="text" class="com-input" placeholder="请输入姓名">
+                </div>
+                <div class="com-serve-contact">
+                    <p>联系方式<span>*</span></p>
+                    <input type="text" class="com-input" placeholder="请输入联系方式">
+                </div>
+            </div>
+            <div class="com-reserve-item com-reserve-item4">
+                <div class="com-reserve-address">
+                    <p>邮箱地址<span>*</span></p>
+                    <input type="text" class="com-input" placeholder="请输入邮箱地址">
+                </div>
+                <div class="com-reserve-wechat">
+                    <p>微信号<span>*</span></p>
+                    <input type="text" class="com-input" placeholder="请输入微信号">
+                </div>
+            </div>
+            <div class="com-res-btns">
+                <div class="com-res-back">返回</div>
+                <div class="com-res-submit">提交预定</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 对比确定 -->
+    <div class="compation" style="display: none;">
+        <div class="compation-icon">
+            <span class="iconfont icon-duihao"></span>
+        </div>
+        <div class="compation-h5">
+            已加入对比<br>
+            请到我的对比中查看对比结果
+        </div>
+        <div class="compation-btn">
+            好的
+        </div>
+    </div>
+
+    <!-- 底部区域 -->
+    <footer class="footer-section">
+        <div class="footer-hd">
+            <div class="banner">
+                <ul class="ft-nav">
+                    <li><a href="./journey.html">旅程</a></li>
+                    <li><a href="javascript:;">酒店</a></li>
+                    <li><a href="javascript:;">机票</a></li>
+                    <li><a href="javascript:;">定制路线</a></li>
+                    <li><a href="javascript:;">游记攻略</a></li>
+                    <li><a href="javascript:;">会员中心</a></li>
+                </ul>
+                <div class="ft-top">
+                    返回顶部
+                    <img src="./images/icon_back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bd">
+            <div class="banner">
+                <div class="footer-msg">
+                    <div class="footer-msg-left">
+                        <div class="footer-msg-notice">
+                            金莲国旅: <br>
+                            对于中国游客而言，以及对于越来越多的世界各地的游客而言， 携程是其可值得信赖的旅行平台，用户可以通过携程的平台进行任何类型的旅行预订，包括从目的地内活动、周末短假及短途旅行，到跨境..
+                        </div>
+                        <div class="footer-msg-contact">
+                            联系我们: <br>
+                            <p>服务热线：020-226231</p>
+                            <p>合作热线：020-115423</p>
+                            <p>联系邮箱：21542512@qq.com</p>
+                            <p>公司地址：广东省广州市天河区龙洞森林公园环山路</p>
+                        </div>
+                    </div>
+                    <div class="footer-msg-right">
+                        <div class="erweicode">
+                            <div class="wechat">
+                                <p>—— 微信客服 ——</p>
+                                <img src="./images/erweicode1.png" alt="">
+                            </div>
+                            <div class="official">
+                                <p>—— 公众号 ——</p>
+                                <img src="./images/erweicode2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobile">咨询电话: <span>020-123456</span> 或 <span>020-326531</span></div>
+                    </div>
+                </div>
+                <ul class="footer-platform">
+                    <li>腾讯开放平台</li>
+                    <li>全球速卖通</li>
+                    <li>腾讯微云</li>
+                    <li>腾讯会议</li>
+                    <li>阿里云计算</li>
+                    <li>腾讯优图</li>
+                    <li>大麦网</li>
+                    <li>腾讯文档</li>
+                    <li>阿里巴巴集团</li>
+                    <li>腾讯企点</li>
+                    <li>网商银行</li>
+                    <li>阿里妈妈</li>
+                    <li>阿里通信</li>
+                    <li>阿里影业</li>
+                    <li>阿里健康</li>
+                    <li>阿里安全</li>
+                </ul>
+                <div class="footer-record">
+                    浙ICP备2012000356号-3
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- 引入 jquery js -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- 引入 common js -->
+    <script src="./js/common.js"></script>
+    <!-- 引入酒店详情 -->
+    <script src="./js/hotel/hotel_detail.js"></script>
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+</body>
+
+</html>

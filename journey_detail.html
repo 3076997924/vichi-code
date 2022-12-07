@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vichi-旅程详情</title>
+    <!-- 引入初始化样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入相同样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入 详情样式 -->
+    <link rel="stylesheet" href="./css/journey_detail.css">
+    <!-- 引入swiper -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- 引入 字体图标  iconfont -->
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_3788509_bx5rjehcoih.css?spm=a313x.7781069.1998910419.53&file=font_3788509_bx5rjehcoih.css">
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-pagination {
+            text-align: right;
+            color: #fff;
+            font-size: 1.5rem;
+            padding-right: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+        <!-- 头部 header section  -->
+        <header class="header-section">
+            <div class="header-bar-section">
+                <div class="login">
+                    <div class="login-icon">
+                        <img src="./images/icon-login.png" alt="">
+                    </div>
+                    <p>
+                        您好，请先 <a href="javascript:;">登陆</a> | <a href="javascript:;">注册</a>
+                    </p>
+                </div>
+                <ul class="header-bar">
+                    <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                    <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                    <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                    <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                </ul>
+            </div>
+            <div class="header-bd-section">
+                <div class="logo">
+                    <h1>
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                    </h1>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html"><span>首页</span></a></li>
+                        <li class="current"><a href="./journey.html"><span>旅程</span></a></li>
+                        <li><a href="javascript:;"><span>酒店</span></a></li>
+                        <li><a href="javascript:;"><span>机票</span></a></li>
+                        <li><a href="javascript:;"><span>定制路线</span></a></li>
+                        <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                        <li><a href="javascript:;"><span>会员中心</span></a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile-links">
+                    <div class="mobile-btns">
+                        <div class="mobile-wrap">
+                            <div class="mobile-title">
+                                我的账号
+                                <span class="iconfont icon-sort" id="closeMobile"></span>
+                            </div>
+                            <div class="login-mobile">
+                                <a href="">登陆</a>
+                            </div>
+                            <div class="register-mobile">
+                                <a href="">注册</a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav-mobile">
+                        <div class="mobile-wrap">
+                            <li class="current"><a href="index.html"><span>首页</span></a></li>
+                            <li><a href="./journey.html"><span>旅程</span></a></li>
+                            <li><a href="javascript:;"><span>酒店</span></a></li>
+                            <li><a href="javascript:;"><span>机票</span></a></li>
+                            <li><a href="javascript:;"><span>定制路线</span></a></li>
+                            <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                            <li><a href="javascript:;"><span>会员中心</span></a></li>
+                        </div>
+                    </ul>
+                    <div class="other-links-mobile">
+                        <div class="mobile-wrap">
+                            <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                            <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                            <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                            <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                        </div>
+                    </div>
+                </nav>
+                <div class="nav-mobile-btn">
+                    <span class="iconfont icon-sort" id="openMobile"></span>
+                </div>
+                <div class="compare">
+                    <img src="./images/PK.png" alt="" class="pk">
+                    <img src="./images/compare.png" alt="" class="com-img">
+                </div>
+            </div>
+        </header>
+
+    <!-- 链接条区域 -->
+    <section class="linksbar-section">
+        <div class="wrap">
+            <div class="linksbar">
+                <a href="index.html" class="backHome"><span class="iconfont icon-zuojiantou"></span> 首页</a> >
+                <a href="./journey.html" class="backJourney">旅程</a> >
+                <a href="./journey_detail.html" class="currentLink">越南富国岛6日4晚自由行</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 详情区域 -->
+    <section class="detail-section">
+        <div class="wrap">
+            <div class="detail">
+                <div class="detail-info">
+                    <div class="detail-title">
+                        <h2>越南富国岛6日4晚自由行</h2>
+                        <p>免签+连住 酒店任选【富有春意·魅力多元】跨海缆车赏美景·珍珠乐园享快乐</p>
+                    </div>
+                    <div class="detail-label">
+                        <div class="detail-tags">
+                            <div class="tag">消毒测温</div>
+                            <div class="tag">度假村酒店</div>
+                            <div class="tag">海景房</div>
+                        </div>
+                        <div class="detail-code">
+                            路线代码: <span>12401520140</span>
+                        </div>
+                    </div>
+                    <div class="detail-price">
+                        <div class="adult">
+                            成人价: <span>¥<i>2500</i></span>
+                        </div>
+                        <div class="child">
+                            儿童价: <span>¥<i>1200</i></span>
+                        </div>
+                    </div>
+                    <div class="detail-img">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./images/detail.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/hantan2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="detail-msg">
+                        <div class="detail-star"><span class="iconfont icon-kongxinwujiaoxing"></span>收藏</div>
+                        <h4>全景游</h4>
+                        <div class="cityGo">出发城市: <span>胡志明市</span></div>
+                        <div class="trip-days">行程天数: <span>6日</span></div>
+                        <div class="trip-outline">
+                            行程概要:
+                            <div class="outline-items">
+                                <div class="outline-item">
+                                    <i class="iconfont icon-wujiaoxing1"></i>
+                                    4晚连住不挪窝，省出时间开心玩乐！
+                                </div>
+                                <div class="outline-item">
+                                    <i class="iconfont icon-wujiaoxing1"></i>
+                                    可以自行安排跨海缆车之旅和珍珠乐园游玩。
+                                </div>
+                                <div class="outline-item">
+                                    <i class="iconfont icon-wujiaoxing1"></i>
+                                    富国岛——朴素，清净，闲暇的度假好去处。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-order">
+                        <a href="./journey_reserve.html">立即预约</a>
+                    </div>
+                </div>
+                <div class="detail-calendar">
+                    <div class="calendar">
+                        <div class="calendar-title">
+                            <a href="javascript:;" id="pre">
+                                <span class="iconfont icon-left"></span>
+                            </a>
+                            <div class="calendar-time">
+                                <h2 id="calendar-year">Year</h2>
+                                <h1 id="calendar-month">Month</h1>
+                            </div>
+                            <a href="javascript:;" id="next">
+                                <span class="iconfont icon-right"></span>
+                            </a>
+                        </div>
+
+                        <div class="body">
+                            <div class="weekdark body-list">
+                                <!--使用无序列表标签显示星期-->
+                                <ul>
+                                    <li>周日</li>
+                                    <li>周一</li>
+                                    <li>周二</li>
+                                    <li>周三</li>
+                                    <li>周四</li>
+                                    <li>周五</li>
+                                    <li>周六</li>
+                                </ul>
+                            </div>
+                            <!--使用无序列表标签显示日期，日期使用JavaScript动态获取，然后使用innerHTML设置<ul>标签之间的HTML-->
+                            <div class="darkgrey body-list">
+                                <ul id="days">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 介绍区域 -->
+    <section class="intro-section">
+        <!-- 介绍导航栏区域 -->
+        <div class="intro-nav-section">
+            <div class="wrap">
+                <div class="intro-nav">
+                    <li class="current" id="briefLink"><a href="#brief">旅程简介</a></li>
+                    <li id="simpleLink"><a href="#simple">简途旅程</a></li>
+                    <li id="recomendLink"><a href="#recomend">重点推荐</a></li>
+                    <li id="tripLink"><a href="#trip">详细行程</a></li>
+                    <li id="costLink"><a href="#cost">费用说明</a></li>
+                    <li id="favouredPolicyLink"><a href="#favouredPolicy">优惠政策</a></li>
+                    <li id="cancelPolicyLink"><a href="#cancelPolicy">取消政策</a></li>
+                    <li id="commentLink"><a href="#comment">用户点评(208)</a></li>
+                </div>
+            </div>
+        </div>
+
+        <!-- 旅程简介区域 -->
+        <div class="brief" id="brief">
+            <div class="wrap">
+                <div class="brief-title intro-title">
+                    01 / <span>旅程<i>简介</i></span>
+                </div>
+                <div class="brief-con">
+                    <p>湄公河干流全长4880公里，是亚洲非常重要的跨国水系，世界第六大河流，流经中国、老挝、泰国、柬埔寨和越南，于越南胡志明市流入南海。湄公河下游三角洲在越南境内，越南称之为九龙江，总程度长2139公里。
+                    </p>
+                    <p>湄公河三角洲没有拥堵的交通，没有气势恢弘的建筑物，这里能有的就是在这片湄公河上来回踱步的体验。而且这里自然环境保护的非常好，三角洲地形保护完善，十分的难得。
+                    </p>
+                    <p>你可以坐上竹筏在密林掩映的河道深处慢慢划行，其乐无穷，两岸的自然风光美不胜收，也可以坐上马达船穿行在水面上。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 简途旅程区域 -->
+        <div class="simple" id="simple">
+            <div class="wrap">
+                <div class="simple-title intro-title">
+                    02 / <span>简途<i>旅程</i></span>
+                </div>
+                <div class="simple-con">
+                    <table class="simple-table" cellspacing=0>
+                        <thead>
+                            <tr>
+                                <th>行程</th>
+                                <th>景点/场馆&活动</th>
+                                <th>用餐</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>第一天</span>
+                                    <p>各地前往富国岛</p>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <span>晚餐</span>
+                                    <p>成人不含餐，儿童不含餐</p>
+                                    <p>当地美食推荐:Mango Bay Restaurant</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>第二天</span>
+                                    <p>富国岛珍珠乐园一日游</p>
+                                </td>
+                                <td>
+                                    <span>景点</span>
+                                    <p>富国岛珍珠游乐园</p>
+                                </td>
+                                <td>
+                                    <span>晚餐</span>
+                                    <p>成人不含餐，儿童不含餐</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>第三天</span>
+                                    <p>富国岛风情一日游</p>
+                                </td>
+                                <td>
+                                    <span>景点</span>
+                                    <p>妈祖庙 护国寺 富国岛国家公园</p>
+                                    <p>富国监狱</p>
+                                </td>
+                                <td>
+                                    <span>晚餐</span>
+                                    <p>成人不含餐，儿童不含餐</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 重点推荐 -->
+        <div class="recomend" id="recomend">
+            <div class="wrap">
+                <div class="recomend-title intro-title">
+                    03 / <span>重点<i>推荐</i></span>
+                </div>
+                <div class="recomend-con">
+                    <div class="recomend-item">
+                        <div class="recomend-img">
+                            <img src="./images/recomend1.jpg" alt="">
+                        </div>
+                        <div class="recomend-info">
+                            <h4>越南3-15日自由行</h4>
+                            <p>春光撩人越色先进芽庄 车转大叻和美奈 西贡返回/不走回头路 宁静的海滩|粉红的教堂|热闹的乐园|洋气的咖啡 都可以一次拥有！越往南 越美丽</p>
+                        </div>
+                    </div>
+                    <div class="recomend-item">
+                        <div class="recomend-img">
+                            <img src="./images/recomend2.jpg" alt="">
+                        </div>
+                        <div class="recomend-info">
+                            <h4>越南芽庄+大叻+胡志明市10日9晚自由行</h4>
+                            <p>追“越”不走回头路·深度畅游小马尔代夫【芽庄3晚】+混血高地小镇【大叻2晚】+一半海水一半沙漠【沙海之恋 美奈2晚】+东方小巴黎【胡志明2晚】 </p>
+                        </div>
+                    </div>
+                    <div class="recomend-item">
+                        <div class="recomend-img">
+                            <img src="./images/recomend3.jpg" alt="">
+                        </div>
+                        <div class="recomend-info">
+                            <h4>越南胡志明市+美奈+大叻8日7晚自由行</h4>
+                            <p>美奈2晚+大叻2晚『Hi走啦』同款·西贡风情·红白沙丘·复古火车·童话疯狂屋</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 详细行程区域 -->
+        <div class="trip" id="trip">
+            <div class="wrap">
+                <div class="trip-title intro-title">
+                    04 / <span>详细<i>行程</i></span>
+                    <p>以下行程时间均为当地时间</p>
+                </div>
+                <div class="trip-con">
+                    <div class="trip-con-day1">
+                        <div class="day-hd">
+                            <h3><i>Day1</i>第一天: 各地_芽庄</h3>
+                            <span>中餐,晚餐</span>      
+                        </div>
+                        <div class="day-location">
+                            <span class="iconfont icon-daohangdizhi"></span>
+                            Deua,Thanon Tha,Vientiane,老挝
+                        </div>
+                        <div class="day1-item">
+                            <h4>航班</h4>
+                            <p>由各地搭乘航班前往芽庄。（具体航班信息请以实际出票为准）</p>
+                        </div>
+                        <div class="day1-item">
+                            <h4>交通</h4>
+                            <p>抵达芽庄，芽庄金兰（卡姆拉恩）机场距离芽庄珍珠岛码头约40分钟车程，建议提前预订接机服务。
+                            </p>
+                            <p>行驶时间：约40分钟
+                            </p>
+                        </div>
+                        <div class="day1-item">
+                            <h4>交通</h4>
+                            <p>您可在珍珠乐园码头办理入住手续，酒店Check-in时间为14:00以后，芽庄海滨往返Vinpearl岛的快船每30分钟一班，24小时营业。
+                            </p>
+                        </div>
+                        <div class="day1-item">
+                            <h4>自由活动</h4>
+                            <p>由于珍珠酒店往返芽庄需要达成缆车或快船，出入并不是很方便，非常推荐选择含（全餐）的房型，酒店餐食是自助餐，中式越式西式均有，餐食使用顺序是晚餐-早餐-午餐。
+                            </p>
+                        </div>
+                        <div class="day1-item">
+                            <h4>酒店</h4>
+                            <p>芽庄珍珠探索岩边度假村或芽庄湾珍珠水疗度假村或芽庄珍珠度假酒店或芽庄珍珠豪华度假酒店
+                                珍珠岛上4家酒店均属于Vinpearl集团，您可根据您的偏好选择。</p>
+                        </div>
+                    </div>
+                    <div class="trip-con-day2">
+                        <div class="day-hd">
+                            <h3>第二天:芽庄出海一日游</h3>
+                            <span>中餐,晚餐</span>      
+                        </div>
+                        <h4>景点/场馆</h4>
+                        <div class="day2-item">
+                            <div class="golocation">
+                                前往: <span>芽庄四岛游</span>
+                            </div>
+                            <p>芽庄四岛游是多数游客来到芽庄会参加的项目，当地旅行社一般都会经营。四岛通常指木岛、银岛、珍珠岛、妙岛、墨岛中的四个，体验活动有登岛游、参观水族馆、浮潜等水上活动。</p>
+                            <div class="yazhuangImgs">
+                                <img src="./images/yazhuang1.jpg" alt="">
+                                <img src="./images/yazhuang2.jpg" alt="">
+                                <img src="./images/yazhuang3.jpg" alt="">
+                                <img src="./images/yazhuang4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="day2-item">
+                            <div class="golocation">
+                                前往: <span>汉谭岛</span>
+                            </div>
+                            <p>汉潭岛(Hon
+                                Tam)是四岛游的一部分，这里水质比较清澈，有很棒的浮潜和潜水点，岛上除了翠绿树木的自然景观，还有不少海上运动，包括帆板和海上降落伞等。海滩上有很多躺椅，可以在这里享受日光浴。
+                            </p>
+                            <div class="yazhuangImgs">
+                                <img src="./images/hantan1.jpg" alt="">
+                                <img src="./images/hantan2.jpg" alt="">
+                                <img src="./images/hantan3.jpg" alt="">
+                                <img src="./images/hantan4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="day2-item">
+                            <div class="golocation">
+                                前往: <span>木岛</span>
+                            </div>
+                            <p>木岛也被称为珊瑚岛或黑岛，是芽庄的知名观光岛屿之一，木岛一带的海域海水清澈、海浪相对平缓，很适合潜水和游泳，在这儿的水下可以看到许多珊瑚和鱼类。木岛、银岛、竹岛和妙岛的四岛游通常是固定内容的旅游套餐。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="trip-tips">
+                        <p>您可在上午自费选择参加出海游。其中推荐您蚕岛（汉谭岛）以及黑岛（木岛），蚕岛是芽庄众多岛屿中开发完善的岛屿，拥有丰富的水上活动；黑岛您可体验非常具有越南特色的簸箕船。出海游码头位于芽庄市区南部，靠近珍珠岛码头，您可搭乘快船回到码头后步行前往。建议您提前预订出海一日游。
+                        </p>
+                        <p>活动时间：约5小时</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 费用说明区域 -->
+        <div class="cost" id="cost">
+            <div class="wrap">
+                <div class="cost-title intro-title">
+                    05 / <span>费用<i>说明</i></span>
+                </div>
+                <div class="cost-con">
+                    <h5>费用包含</h5>
+                    <p>当地交通：指定地点集合：39A Co Bac Street, </p>
+                    <p>餐食：越南菜肴（3道菜 +1份甜点）、茶，冰水</p>
+                    <p>司导服务：专业厨师指导
+                    </p>
+                    <p>其他：空调厨房、烹饪食材、當地市场导览（限上午）
+                    </p>
+                    <h5>费用不包含
+                    </h5>
+                    <p>一切个人消费及费用包含中未提及的任何费用</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 优惠政策区域 -->
+        <div class="favouredPolicy" id="favouredPolicy">
+            <div class="wrap">
+                <div class="favouredPolicy-title intro-title">
+                    06 / <span>优惠<i>政策</i></span>
+                </div>
+                <div class="favouredPolicy-con">
+                    <p>游客须密切关注疫情风险提示，提前了解出发地、目的地疫情防控政策并按要求做好防控措施、准备好防控政策要求的出行必须文件。在行程中如遇疫情变化请游客按照当地疫情防控要求出行。如因游客自身原因违反疫情防控要求，则由游客自行承担相应法律责任
+                    </p>
+                    <p>越南出行指南（仅供参考）</p>
+                    <p>禁忌提示：请尊重当地的饮食习惯、习俗禁忌、宗教礼仪等，入乡随俗，融入当地的民风民情</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 取消政策区域 -->
+        <div class="cancelPolicy" id="cancelPolicy">
+            <div class="wrap">
+                <div class="cancelPolicy-title intro-title">
+                    07 / <span>取消<i>政策</i></span>
+                </div>
+                <div class="cancelPolicy-con">
+                    <h5>服务信息</h5>
+                    <p>支付完成后商家最晚会在9个工作小时内（9:00-18:00）确认是否预定成功
+                    </p>
+                    <p>超时未确认系统将自动退款，预计1-7个工作日退还到支付账户</p>
+                    <p>本商品提供出团通知书/确认单，商家最晚在出行日期前1天发送，如未收到请及时与商家联系</p>
+                    <h5>取消政策</h5>
+                    <p>用户违约规则：此商品预订成功后不可取消，敬请谅解。
+                    </p>
+                    <p>时差说明：上述时间均为商品当地时间</p>
+                    <p>商家违约规则：预订成功后，因商家原因取消的，除全额退款外，还应向用户支付订单总费用等额的违约金（不可抗力除外）。</p>
+                    <p>时差说明：上述时间均为商品当地时间</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 用户点评区域 -->
+        <div class="comment" id="comment">
+            <div class="wrap">
+                <div class="comment-hd">
+                    <h3>用户点评(218条)</h3>
+                    <a href="./journey_comment.html">查看更多</a>
+                </div>
+                <div class="comment-bd">
+                    <div class="comment-item">
+                        <div class="comment-left">
+                            <div class="comment-attr">
+                                <img src="./images/user11.png" alt="">
+                            </div>
+                            <div class="comment-name">
+                                浅草色根木
+                            </div>
+                        </div>
+                        <div class="comment-right">
+                            <div class="comment-time">
+                                2022-07-27 17:01
+                            </div>
+                            <div class="comment-con">
+                                富国岛适合休闲的地方，广州有直飞比较方便，而且免签，酒店有固定班车往返机场，离机场比较近，而且有班车去动物园和珍珠岛乐园，门口也有付费的旅游大巴去缆车，诺富特环境不错，早餐也挺好，而且早餐到早上十点半，酒店有免费的瑜伽课程，沙滩的小艇可以免费玩。
+                            </div>
+                            <div class="comment-imgs">
+                                <img src="./images/user12.jpg" alt="">
+                                <img src="./images/user13.jpg" alt="">
+                                <img src="./images/user14.jpg" alt="">
+                                <img src="./images/user15.jpg" alt="">
+                                <img src="./images/user16.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-left">
+                            <div class="comment-attr">
+                                <img src="./images/user21.png" alt="">
+                            </div>
+                            <div class="comment-name">
+                                默默蓓
+                            </div>
+                        </div>
+                        <div class="comment-right">
+                            <div class="comment-time">
+                                2022-04-20 11:00
+                            </div>
+                            <div class="comment-con">
+                                酒店的硬件设施和服务态度都不错，虽然部分工作人员的英文不是太过关，但是总体上沟通还是可以实现的，而且耐心还是很值得表扬的。酒店自己的海滩也比较好，水质还算可以，清洁维护也比较到位。房间方面推荐别墅，性价比很高，比主楼的豪华房更有感觉。酒店位置以及周边交通确实偏僻了一点，但这是当前全岛发展刚起步造成的，以后一定会越来越好。由于挨着游乐场和动物园，而且有免费接送班车，如果带孩子来玩会是很方便的。
+                            </div>
+                            <div class="comment-imgs">
+                                <img src="./images/user22.jpg" alt="">
+                                <img src="./images/user23.jpg" alt="">
+                                <img src="./images/user24.jpg" alt="">
+                                <img src="./images/user25.jpg" alt="">
+                                <img src="./images/user26.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-left">
+                            <div class="comment-attr">
+                                <img src="./images/user31.png" alt="">
+                            </div>
+                            <div class="comment-name">
+                                朱小鱼*1024
+                            </div>
+                        </div>
+                        <div class="comment-right">
+                            <div class="comment-time">
+                                2022-02-11 10:00
+                            </div>
+                            <div class="comment-con">
+                                富国岛适合休闲的地方，广州有直飞比较方便，而且免签，酒店有固定班车往返机场，离机场比较近，而且有班车去动物园和珍珠岛乐园，门口也有付费的旅游大巴去缆车，诺富特环境不错，早餐也挺好，而且早餐到早上十点半，酒店有免费的瑜伽课程，沙滩的小艇可以免费玩。
+                            </div>
+                            <div class="comment-imgs">
+                                <img src="./images/user32.jpg" alt="">
+                                <img src="./images/user33.jpg" alt="">
+                                <img src="./images/user34.jpg" alt="">
+                                <img src="./images/user35.jpg" alt="">
+                                <img src="./images/user36.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer class="footer-section">
+        <div class="footer-hd">
+            <div class="banner">
+                <ul class="ft-nav">
+                    <li><a href="./journey.html">旅程</a></li>
+                    <li><a href="javascript:;">酒店</a></li>
+                    <li><a href="javascript:;">机票</a></li>
+                    <li><a href="javascript:;">定制路线</a></li>
+                    <li><a href="javascript:;">游记攻略</a></li>
+                    <li><a href="javascript:;">会员中心</a></li>
+                </ul>
+                <div class="ft-top">
+                    返回顶部
+                    <img src="./images/icon_back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bd">
+            <div class="banner">
+                <div class="footer-msg">
+                    <div class="footer-msg-left">
+                        <div class="footer-msg-notice">
+                            金莲国旅: <br>
+                            对于中国游客而言，以及对于越来越多的世界各地的游客而言， 携程是其可值得信赖的旅行平台，用户可以通过携程的平台进行任何类型的旅行预订，包括从目的地内活动、周末短假及短途旅行，到跨境..
+                        </div>
+                        <div class="footer-msg-contact">
+                            联系我们: <br>
+                            <p>服务热线：020-226231</p>
+                            <p>合作热线：020-115423</p>
+                            <p>联系邮箱：21542512@qq.com</p>
+                            <p>公司地址：广东省广州市天河区龙洞森林公园环山路</p>
+                        </div>
+                    </div>
+                    <div class="footer-msg-right">
+                        <div class="erweicode">
+                            <div class="wechat">
+                                <p>—— 微信客服 ——</p>
+                                <img src="./images/erweicode1.png" alt="">
+                            </div>
+                            <div class="official">
+                                <p>—— 公众号 ——</p>
+                                <img src="./images/erweicode2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobile">咨询电话: <span>020-123456</span> 或 <span>020-326531</span></div>
+                    </div>
+                </div>
+                <ul class="footer-platform">
+                    <li>腾讯开放平台</li>
+                    <li>全球速卖通</li>
+                    <li>腾讯微云</li>
+                    <li>腾讯会议</li>
+                    <li>阿里云计算</li>
+                    <li>腾讯优图</li>
+                    <li>大麦网</li>
+                    <li>腾讯文档</li>
+                    <li>阿里巴巴集团</li>
+                    <li>腾讯企点</li>
+                    <li>网商银行</li>
+                    <li>阿里妈妈</li>
+                    <li>阿里通信</li>
+                    <li>阿里影业</li>
+                    <li>阿里健康</li>
+                    <li>阿里安全</li>
+                </ul>
+                <div class="footer-record">
+                    浙ICP备2012000356号-3
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 放大图片 -->
+    <div class="bigImg" style="display: none;">
+        <img src="" alt="" id="bigImg">
+    </div>
+    <div class="closeImg" style="display: none;">
+        <span class="iconfont icon-zuojiantou"></span>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="Bigmask" style="display: none;"></div>
+
+    <!-- 引入jquery js -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/journey_detail.js"></script>
+    <!-- 引入公共 js -->
+    <script src="./js/common.js"></script>
+    <!-- 引入 swiper js -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- swiper 配置项 -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+        });
+    </script>
+</body>
+
+</html>

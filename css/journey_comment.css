@@ -1,0 +1,103 @@
+:root{
+    --maindeepColor: #101d36;
+    --mainColor: #114b9c;
+}
+
+
+/* 用户点评区域 */
+.comment{
+    width: 100%;
+    padding-top: 3rem;
+}
+.comment-hd{
+    display: flex;
+    justify-content: space-between;
+}
+.comment-hd h3{
+    font-size: 1.875rem;
+}
+.comment-hd a{
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: bolder;
+}
+.comment-bd{
+    margin-top: 2rem;
+}
+.comment-item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    border-bottom: .0625rem solid #ccc;
+}
+.comment-left{
+    width: 12%;
+    display: flex;
+    height: 6.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.comment-name{
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: var(--maindeepColor);
+}
+.comment-attr{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.comment-attr img{
+    width: 100%;
+    height: 100%;
+}
+.comment-right{
+    width: 87%;
+    font-weight: bolder;
+    color: var(--maindeepColor);
+}
+.comment-time{
+    font-size: 1.5rem;
+}
+.comment-con{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.comment-imgs img{
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width:1200px){
+    .wrap{
+        width: 100%;
+    }
+}
+@media screen and (max-width:700px){
+    .comment-left{
+        justify-content: center;
+        width: 20%;
+    }
+    .comment-name{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1; 
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+    }
+    .comment-right{
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width:991px){
+    .linksbar-section{
+        padding: 0 1rem;
+    }
+    .comment{
+        padding: 3rem 1rem;
+    }
+}

@@ -1,0 +1,981 @@
+:root {
+    --main-color: #114b9c;
+  }
+.banner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.swiper-section{
+    position: relative;
+}
+/* 搜索区域 */
+.search{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 333;
+    bottom: -5.125rem;
+    left: 50%;
+    padding: 0 2.5rem;
+    transform: translateX(-50%);
+    width: 80.75rem;
+    height: 8.5rem;
+    border-radius: 1rem;
+    background: #fff;
+}
+.search-where{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #000;
+    font-style: italic;
+}
+.search-where span{
+    color: #114b9c;
+}
+.search-input{
+    position: relative;
+    width: 50rem;
+    height: 5rem;
+    background: #f8f8f8;
+    margin-left: 3rem;
+    border-radius: 1rem;
+}
+.search-input input{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 2.25rem;
+    font-size: 1.5rem;
+}
+.search-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -6rem;
+    width: 6.25rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    background: #114b9c;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.search-result{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 8.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75.25rem;
+    padding: 3.125rem;
+    background: #def1fd;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.search-result-item{
+    width: 12rem;
+}
+.search-result-item a{
+    display: block;
+    display: flex;
+}
+.search-result-item img{
+    width: 5rem;
+    height: 5rem;
+}
+.search-result-info{
+    margin-left: .625rem;
+    padding-top: .625rem;
+}
+.search-result-info h4{
+    color: #1d2840;
+    font-size: 1rem;
+}
+.search-result-info p{
+    color: #666;
+    font-size: .875rem;
+}
+
+.item-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    background: #ff8315;
+    color: #fff;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/* 全景游区域 */
+.panorama-section{
+    width: 100%;
+    padding: 10.875rem 0 3.75rem;
+    background-color: #f5f9fe;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.tour-con{
+    margin-top: 1.8rem;
+}
+.tour-title{
+    margin: 0 auto;
+}
+.tour-more{
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    width: 18.75rem;
+    height: 3.75rem;
+    border: .1875rem solid #666;
+    border-radius: .625rem;
+}
+.tour-more a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #666;
+    text-align: center;
+    line-height: 3.75rem;
+    font-size: 1.5rem;
+}
+.tour-more:hover{
+    background: var(--main-color);
+}
+.tour-more:hover a{
+    color: #fff;
+    letter-spacing: 1px;
+}
+/* 北越游区域 */
+.panorama{
+    width: 100%;
+}
+.panorama-title{
+    width: 17.75rem;
+    height: 5.75rem;
+    background: url(../images/panoramaTitle.png) no-repeat center center;
+    background-size: 17.75rem 5.75rem;
+}
+.panorama-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.panorama-con-left{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 49%;
+}
+.panorama-con-left .panoramalfItem a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+.panorama-con-left .panoramalfItem img{
+    width: 100%;
+    height: 100%;
+}
+.panorama-con-left .panoramalfItem:nth-child(1){
+    width: 100%;
+}
+.panorama-con-left .panoramalfItem:nth-child(2){
+    width: 49%;
+}
+.panorama-con-left .panoramalfItem:nth-child(3){
+    width: 49%;
+}
+.panorama-con-right{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 49%;
+}
+.panorama-con-right .panoramartItem a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+.panorama-con-right .panoramartItem img{
+    width: 100%;
+    height: 100%;
+}
+.panorama-con-right .panoramartItem:nth-child(1){
+    width: 100%;
+}
+.panorama-con-right .panoramartItem:nth-child(2){
+    width: 49%;
+}
+.panorama-con-right .panoramartItem:nth-child(3){
+    width: 49%;
+}
+.panoramalMsg{
+    position: absolute;
+    z-index: 5;
+    bottom: 2.5rem;
+    left: 2rem;
+}
+.panoramalMsg h4{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.panoramalMsg p{
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+}
+.panoramalInfo{
+    margin-top: 1rem;
+}
+.panoramalInfo h4{
+    color: #101d36;
+    font-size: 1.5625rem;
+}
+.panoramalInfo p{
+    font-size: 1.125rem;
+    color: #666;
+}
+.panoramalfItem:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+.panoramalfItem:hover img{
+    transform: scale(1.1);
+}
+.panoramalfItem:hover .panoramalMsg{
+    letter-spacing: 1px;
+}
+.panoramalfItem:hover .panoramalInfo{
+    letter-spacing: 1px;
+}
+
+.panoramartItem:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+.panoramartItem:hover img{
+    transform: scale(1.1);
+}
+.panoramartItem:hover .panoramalMsg{
+    letter-spacing: 1px;
+}
+.panoramartItem:hover .panoramalInfo{
+    letter-spacing: 1px;
+}
+
+
+
+
+/* 北越游区域 */
+.northVie-section{
+    padding: 2.5rem 0;
+}
+.northVie{
+    width: 100%;
+}
+.northVie-title{
+    width: 22.5rem;
+    height: 6rem;
+    background: url(../images/northVieTitle.png) no-repeat center center;
+    background-size: 22.5rem 6rem;
+}
+.northVie-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.northVie-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: .5rem;
+    transition: all .4s linear;
+}
+.northVie-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.northVielf{
+    width: 34%;
+}
+.northVielf .northVie-item{
+    width: 100%;
+    height: 100%;
+}
+.northVie-rt{
+    width: 64%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.northVie-rt .northVie-item{
+    width: 49%;
+}
+.northVie-rt .northVie-item:nth-child(3){
+    margin-top: 1rem;
+}
+.northVie-rt .northVie-item:nth-child(4){
+    margin-top: 1rem;
+}
+.northVie-item img{
+    width: 100%;
+    height: 100%;
+}
+.northVie-msg{
+    position: absolute;
+    z-index: 5;
+    bottom: -15rem;
+    left: 2rem;
+}
+.northVie-msg h4{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.northVie-msg{
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    color: #fff;
+}
+.northVie-item:hover img{
+    transform: scale(1.1);
+}
+.northVie-item:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+.northVie-item:hover .northVie-msg{
+    bottom: 5rem;
+}
+
+/* 南越游区域 */
+.southVie-section{
+    padding: 2.5rem 0;
+}
+.southVie{
+    width: 100%;
+}
+.southVie-title{
+    width: 30.375rem;
+    height: 6rem;
+    background: url(../images/southVieTitle.png) no-repeat center center;
+    background-size: 30.375rem 6rem;
+}
+.tour-con2{
+    margin-top: 1.5625rem;
+}
+.southVie-con{
+    position: relative;
+    width: 100%;
+    height: 42rem;
+    overflow: hidden;
+}
+.southVie-con a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.southVie-con img{
+    width: 100%;
+    height: 100%;
+}
+.southVie-con:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+.southVie-con:hover img{
+    transform: scale(1.1);
+}
+.southVie-con:hover .southVie-msg h4{
+    transform: scale(1.05);
+}
+.southVie-con:hover .southVie-msg p{
+    transform: scale(1.05);
+}
+.southVie-con:hover .tour-more2{
+    letter-spacing: 1px;
+}
+.southVie-msg{
+    position: absolute;
+    z-index: 5;
+    top: 9.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.southVie-msg h4{
+    font-size: 2.4rem;
+    color: #fff;
+}
+.southVie-msg p{
+    font-size: 1.2rem;
+    margin-top: 1.25rem;
+}
+.tour-more2{
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9.375rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: .625rem;
+    color: var(--main-color);
+}
+
+
+/* 中部游 */
+.middleVie-section{
+    padding: 2.5rem 0;
+}
+.middleVie{
+    width: 100%;
+}
+.middleVie-title{
+    width: 24.6875rem;
+    height: 6rem;
+    background: url(../images/middleVieTitle.png) no-repeat center center;
+    background-size: 24.6875rem 6rem;
+}
+.middleVie-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.middleVie-con a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.middVie-lf{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 49%;
+}
+.middVie-lf .middVie-lf-item{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 24.75rem;
+    margin-top: 1.5rem;
+}
+.middVie-lf .middVie-lf-item img{
+    width: 100%;
+    height: 100%;
+}
+.middVie-rt{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 49%;
+}
+.middVie-rt .middVie-rt-item{
+    position: relative;
+    overflow: hidden;
+    height: 24.75rem;
+    margin-top: 1.5rem;
+}
+.middVie-rt .middVie-rt-item img{
+    width: 100%;
+    height: 100%;
+}
+.middVie-rt .middVie-rt-item:nth-child(1){
+    width: 100%;
+}
+.middVie-rt .middVie-rt-item:nth-child(2){
+    width: 49%;
+}
+.middVie-rt .middVie-rt-item:nth-child(3){
+    width: 49%;
+}
+.middVie-info{
+    position: absolute;
+    z-index: 5;
+    bottom: -15rem;
+    left: 1.25rem;
+}
+.middVie-info h4{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.middVie-info p{
+    font-size: 1.125rem;
+    color: #fff;
+    margin-top: .625rem;
+}
+.middVie-lf-item:hover .middVie-info{
+    bottom: 3.5rem;
+}
+.middVie-lf-item:hover img{
+    transform: scale(1.1);
+}
+.middVie-lf-item:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+.middVie-rt-item:hover .middVie-info{
+    bottom: 3.5rem;
+}
+.middVie-rt-item:hover img{
+    transform: scale(1.1);
+}
+.middVie-rt-item:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* 中南半岛游 */
+.indochina-section{
+    padding: 2.5rem 0;
+    background-color: #f5f9fe;
+}
+.indochina{
+    width: 100%;
+}
+.indochina-title{
+    width: 31.5rem;
+    height: 6.75rem;
+    background: url(../images/indochinaTitle.png) no-repeat center center;
+    background-size: 31.5rem 6.75rem;
+}
+.indochina-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.indochina-item{
+    position: relative;
+    overflow: hidden;
+    height: 32rem;
+    margin-top: 1rem;
+}
+.indochina-item img{
+    width: 100%;
+    height: 100%;
+}
+.indochina-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.indochina-item:nth-child(1){
+    width: 70%;
+}
+.indochina-item:nth-child(2){
+    width: 29%;
+}
+.indochina-item:nth-child(3){
+    width: 35%;
+}
+.indochina-item:nth-child(4){
+    width: 34%;
+}
+.indochina-item:nth-child(5){
+    width: 29%;
+}
+.indochina-info {
+    position: absolute;
+    z-index: 5;
+    bottom: -15rem;
+    left: 1.25rem;
+}
+.indochina-info h4{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.indochina-info p{
+    font-size: 1.125rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+.indochina-item:hover .indochina-info{
+    bottom: 3.75rem;
+}
+.indochina-item:hover img{
+    transform: scale(1.1);
+}
+.indochina-item:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+/* 边境游 */
+.border-section{
+    padding: 2.5rem 0;
+}
+.border{
+    width: 100%;
+}
+.border-title{
+    width: 36.125rem;
+    height: 5.75rem;
+    background: url(../images/borderTitle.png) no-repeat center center;
+    background-size: 36.125rem 5.75rem;
+}
+.border-con{
+    position: relative;
+    width: 100%;
+    height: 42rem;
+    overflow: hidden;
+}
+.border-con a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.border-con img{
+    width: 100%;
+    height: 100%;
+}
+.border-con:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+.border-con:hover img{
+    transform: scale(1.1);
+}
+.border-con:hover .border-info h4{
+    transform: scale(1.05);
+}
+.border-con:hover .border-info p{
+    transform: scale(1.05);
+}
+.border-con:hover .tour-more2{
+    letter-spacing: 1px;
+}
+.border-info{
+    position: absolute;
+    z-index: 5;
+    top: 9.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.border-info h4{
+    font-size: 2.4rem;
+    color: #fff;
+}
+.border-info p{
+    font-size: 1.2rem;
+    margin-top: 1.25rem;
+}
+
+
+/* 体验游 */
+.experience-section{
+    padding: 2.5rem 0;
+}
+.experience{
+    width: 100%;
+}
+.experience-title{
+    width: 28rem;
+    height: 5.75rem;
+    background: url(../images/experienceTitle.png) no-repeat center center;
+    background-size: 28rem 5.75rem;
+}
+.experience-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.experience-item{
+    position: relative;
+    overflow: hidden;
+}
+.experience-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.experience-info{
+    position: absolute;
+    z-index: 5;
+    bottom: -15rem;
+    left: 1.25rem;
+}
+.experience-info h4{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.experience-info p{
+    font-size: 1.1875rem;
+    margin-top: 1rem;
+    color: #fff;
+}
+.experience-item:hover img{
+    transform: scale(1.1);
+}
+.experience-item:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+.experience-item:hover .experience-info{
+    bottom: 3.125rem;
+}
+.experience-item img{
+    width: 100%;
+    height: 100%;
+}
+.experience-left{
+    width: 70%;
+}
+.experience-left .experience-item{
+    width: 100%;
+}
+.experience-right{
+    width: 29%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.experience-right .experience-item{
+    width: 100%;
+}
+.experience-right .experience-item:nth-child(2){
+    margin-top: 1.5rem;
+}
+
+
+/* 高端度 */
+.upscale-section{
+    padding: 2.5rem 0;
+    background: #f5f9fe;
+}
+.upscale{
+    width: 100%;
+}
+.upscale-title{
+    width: 23.1875rem;
+    height: 6.75rem;
+    background: url(../images/upscaleTitle.png) no-repeat center center;
+    background-size: 23.1875rem 6.75rem;
+}
+.upscale-con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.upscale-con img{
+    width: 100%;
+    height: 100%;
+}
+.upscale-lf{
+    width: 32%;
+}
+.upscale-lf-item{
+    position: relative;
+}
+.upscale-md{
+    width: 32%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.upscale-md-item{
+    position: relative;
+}
+.upscale-md-item:nth-child(2){
+    margin-top: 1rem;
+}
+.upscale-rt{
+    width: 32%;
+}
+.upscale-rt-item{
+    position: relative;
+}
+.upscale-info{
+    position: absolute;
+    z-index: 5;
+    left: 1rem;
+    bottom: -15rem;
+}
+.upscale-info h4{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.upscale-info p{
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: #fff;
+}
+.upscale-item{
+    overflow: hidden;
+}
+.upscale-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.upscale-item:hover .upscale-info{
+    bottom: 3.5rem;
+}
+.upscale-item:hover .mask{
+    background: rgba(0, 0, 0, 0.2);
+}
+.upscale-item:hover img{
+    transform: scale(1.1);
+}
+
+
+
+/* 媒体查询 */
+@media screen and (max-width:1200px) {
+    .banner{
+        width: 100%;
+    }
+    .southVie{
+        padding: 0 1rem;
+    }
+    .border{
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width:991px) {
+    .northVielf{
+        width: 58%;
+    }
+    .northVie-rt{
+        width: 40%;
+    }
+    .northVie-rt .northVie-item{
+        width: 100%;
+    }
+    .northVie-rt .northVie-item:nth-child(2){
+        margin-top: 1rem;
+    }
+    .northVie-con{
+        padding: 0 .9375rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .panorama-con{
+        padding: 0 1.25rem;
+    }
+    .panorama-con-left{
+        width: 100%;
+    }
+    .panorama-con-right{
+        width: 100%;
+    }
+    .middVie-lf{
+        width: 100%;
+    }
+    .middVie-rt{
+        width: 100%;
+    }
+    .middVie-lf .middVie-lf-item{
+        height: auto;
+    }
+    .middVie-rt .middVie-rt-item{
+        height: auto;
+    }
+    .middleVie-con{
+        padding: 0 1rem;
+    }
+    .southVie-msg{
+        width: 80%;
+    }
+    .indochina-item:nth-child(1){
+        width: 100%;
+    }
+    .indochina-item:nth-child(2){
+        width: 49%;
+    }
+    .indochina-item:nth-child(3){
+        width: 49%;
+    }
+    .indochina-item:nth-child(4){
+        width: 49%;
+    }
+    .indochina-item:nth-child(5){
+        width: 49%;
+    }
+    .experience-con{
+        padding: 0 1rem;
+    }
+    .experience-left{
+        width: 100%;
+    }
+    .experience-right{
+        width: 100%;
+    }
+    .experience-right .experience-item{
+        width: 49%;
+        margin-top: 1.5rem;
+    }
+    .indochina-con{
+        padding: 0 1rem;
+    }
+    .upscale-con{
+        padding: 0 1rem;
+        justify-content: space-around;
+    }
+    .upscale-lf{
+        width: 100%;
+    }
+    .upscale-rt{
+        width: 100%;
+    }
+    .upscale-md{
+        width: 100%;
+    }
+    .upscale-md-item{
+        width: 49%;
+        margin-top: 1rem;
+    }
+    .upscale-rt-item{
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .search{
+        width: 90%;
+    }
+    .search-input{
+        width: 70%;
+    }
+    .search-result{
+        width: 80%;
+    }
+}
+@media screen and (max-width:500px) {
+    .search{
+        width: 90%;
+    }
+    .search-input{
+        width: 60%;
+        gap: 2rem;
+    }
+    .search-result-item{
+        width: 15rem;
+    }
+}
+@media screen and (max-width:352px) {
+    .search{
+        width: 95%;
+    }
+    .search-input{
+        width: 65%;
+        margin-left: 1rem;
+    }
+    .search-where{
+        width: 15%;
+    }
+}

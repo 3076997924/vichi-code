@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vichi-旅程评论</title>
+    <!-- 引入初始化样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入相同样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入评论样式 -->
+    <link rel="stylesheet" href="./css/journey_comment.css">
+    <!-- 引入 字体图标  iconfont -->
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_3788509_bx5rjehcoih.css?spm=a313x.7781069.1998910419.53&file=font_3788509_bx5rjehcoih.css">
+</head>
+
+<body>
+        <!-- 头部 header section  -->
+    <header class="header-section">
+        <div class="header-bar-section">
+            <div class="login">
+                <div class="login-icon">
+                    <img src="./images/icon-login.png" alt="">
+                </div>
+                <p>
+                    您好，请先 <a href="javascript:;">登陆</a> | <a href="javascript:;">注册</a>
+                </p>
+            </div>
+            <ul class="header-bar">
+                <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+            </ul>
+        </div>
+        <div class="header-bd-section">
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><span>首页</span></a></li>
+                    <li class="current"><a href="./journey.html"><span>旅程</span></a></li>
+                    <li><a href="javascript:;"><span>酒店</span></a></li>
+                    <li><a href="javascript:;"><span>机票</span></a></li>
+                    <li><a href="javascript:;"><span>定制路线</span></a></li>
+                    <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                    <li><a href="javascript:;"><span>会员中心</span></a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-links">
+                <div class="mobile-btns">
+                    <div class="mobile-wrap">
+                        <div class="mobile-title">
+                            我的账号
+                            <span class="iconfont icon-sort" id="closeMobile"></span>
+                        </div>
+                        <div class="login-mobile">
+                            <a href="">登陆</a>
+                        </div>
+                        <div class="register-mobile">
+                            <a href="">注册</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-mobile">
+                    <div class="mobile-wrap">
+                        <li class="current"><a href="index.html"><span>首页</span></a></li>
+                        <li><a href="./journey.html"><span>旅程</span></a></li>
+                        <li><a href="javascript:;"><span>酒店</span></a></li>
+                        <li><a href="javascript:;"><span>机票</span></a></li>
+                        <li><a href="javascript:;"><span>定制路线</span></a></li>
+                        <li><a href="javascript:;"><span>游记攻略</span></a></li>
+                        <li><a href="javascript:;"><span>会员中心</span></a></li>
+                    </div>
+                </ul>
+                <div class="other-links-mobile">
+                    <div class="mobile-wrap">
+                        <li><a href="javascript:;"><img src="./images/icon-star.png">收藏</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-order.png">我的订单</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-xinshou.png">新手上路</a></li>
+                        <li><a href="javascript:;"><img src="./images/icon-contact.png">联系我们:020-204500</a></li>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-mobile-btn">
+                <span class="iconfont icon-sort" id="openMobile"></span>
+            </div>
+            <div class="compare">
+                <img src="./images/PK.png" alt="" class="pk">
+                <img src="./images/compare.png" alt="" class="com-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- 链接条区域 -->
+    <section class="linksbar-section">
+        <div class="wrap">
+            <div class="linksbar">
+                <a href="./journey_detail.html"><span class="iconfont icon-zuojiantou"></span>返回上一页</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户点评区域 -->
+    <div class="comment">
+        <div class="wrap">
+            <div class="comment-hd">
+                <h3>用户点评(218条)</h3>
+                <a href="javascript:;">查看更多</a>
+            </div>
+            <div class="comment-bd">
+                <div class="comment-item">
+                    <div class="comment-left">
+                        <div class="comment-attr">
+                            <img src="./images/user11.png" alt="">
+                        </div>
+                        <div class="comment-name">
+                            浅草色根木
+                        </div>
+                    </div>
+                    <div class="comment-right">
+                        <div class="comment-time">
+                            2022-07-27 17:01
+                        </div>
+                        <div class="comment-con">
+                            富国岛适合休闲的地方，广州有直飞比较方便，而且免签，酒店有固定班车往返机场，离机场比较近，而且有班车去动物园和珍珠岛乐园，门口也有付费的旅游大巴去缆车，诺富特环境不错，早餐也挺好，而且早餐到早上十点半，酒店有免费的瑜伽课程，沙滩的小艇可以免费玩。
+                        </div>
+                        <div class="comment-imgs">
+                            <img src="./images/userCom12.jpg" alt="">
+                            <img src="./images/userCom14.jpg" alt="">
+                            <img src="./images/userCom15.jpg" alt="">
+                            <img src="./images/userCom16.jpg" alt="">
+                            <img src="./images/comUser17.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-left">
+                        <div class="comment-attr">
+                            <img src="./images/user21.png" alt="">
+                        </div>
+                        <div class="comment-name">
+                            默默蓓
+                        </div>
+                    </div>
+                    <div class="comment-right">
+                        <div class="comment-time">
+                            2022-04-20 11:00
+                        </div>
+                        <div class="comment-con">
+                            酒店的硬件设施和服务态度都不错，虽然部分工作人员的英文不是太过关，但是总体上沟通还是可以实现的，而且耐心还是很值得表扬的。酒店自己的海滩也比较好，水质还算可以，清洁维护也比较到位。房间方面推荐别墅，性价比很高，比主楼的豪华房更有感觉。酒店位置以及周边交通确实偏僻了一点，但这是当前全岛发展刚起步造成的，以后一定会越来越好。由于挨着游乐场和动物园，而且有免费接送班车，如果带孩子来玩会是很方便的。
+                        </div>
+                        <div class="comment-imgs">
+                            <img src="./images/comUser22.jpg" alt="">
+                            <img src="./images/comUser23.jpg" alt="">
+                            <img src="./images/comUser24.jpg" alt="">
+                            <img src="./images/comUser25.jpg" alt="">
+                            <img src="./images/comUser26.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-left">
+                        <div class="comment-attr">
+                            <img src="./images/user31.png" alt="">
+                        </div>
+                        <div class="comment-name">
+                            朱小鱼*1024
+                        </div>
+                    </div>
+                    <div class="comment-right">
+                        <div class="comment-time">
+                            2022-02-11 10:00
+                        </div>
+                        <div class="comment-con">
+                            富国岛适合休闲的地方，广州有直飞比较方便，而且免签，酒店有固定班车往返机场，离机场比较近，而且有班车去动物园和珍珠岛乐园，门口也有付费的旅游大巴去缆车，诺富特环境不错，早餐也挺好，而且早餐到早上十点半，酒店有免费的瑜伽课程，沙滩的小艇可以免费玩。
+                        </div>
+                        <div class="comment-imgs">
+                            <img src="./images/userCom32.jpg" alt="">
+                            <img src="./images/userCom33.jpg" alt="">
+                            <img src="./images/userCom34.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-left">
+                        <div class="comment-attr">
+                            <img src="./images/user41.jpg" alt="">
+                        </div>
+                        <div class="comment-name">
+                            朱小鱼*1024
+                        </div>
+                    </div>
+                    <div class="comment-right">
+                        <div class="comment-time">
+                            2022-02-11 10:00
+                        </div>
+                        <div class="comment-con">
+                            酒店服务很到位，前台没有中文只能讲英语。到店就给免费升级了房间，所以我们的房间是高层的家庭套房，房间是一大一小两张床，可以睡三个人。给的房间在转角，景观非常好，阳台可以看到整个海湾半岛，再加秀丽河景，小床边落地窗能看到河景和不远处岘港游乐园的摩天轮，非常舒服。不过住的这天恰逢元旦，楼下乡村卡拉OK鬼嚎到半夜才停，关着阳台门听得清清楚楚。楼下是本地人吃宵夜的地方，晚上很旺，至于食物，你需要具有探索精神才能尝试...
+                        </div>
+                        <div class="comment-imgs">
+                            <img src="./images/userCom42.jpg" alt="">
+                            <img src="./images/userCom43.jpg" alt="">
+                            <img src="./images/userCom44.jpg" alt="">
+                            <img src="./images/userCom45.jpg" alt="">
+                            <img src="./images/userCom46.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-left">
+                        <div class="comment-attr">
+                            <img src="./images/user51.jpg" alt="">
+                        </div>
+                        <div class="comment-name">
+                            M52677*
+                        </div>
+                    </div>
+                    <div class="comment-right">
+                        <div class="comment-time">
+                            2022-02-11 10:00
+                        </div>
+                        <div class="comment-con">
+                            酒店位置不错，离江很近，比较好找的建筑物。住了好几天，很舒服，饭菜不错，服务也非常好，推荐早上的米粉，四楼的餐厅也不错，总体很棒。
+                        </div>
+                        <div class="comment-imgs">
+                            <img src="./images/usercom53.jpg" alt="">
+                            <img src="./images/usercom54.jpg" alt="">
+                            <img src="./images/usercom55.jpg" alt="">
+                            <img src="./images/usercom56.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分页器区域 -->
+    <div class="pagenation">
+        <!-- <div class="prev pagebtn">上一页</div>
+        <div class="page pagebtn current">1</div>
+        <div class="page pagebtn">2</div>
+        <div class="page pagebtn">3</div>
+        <div class="page pagebtn">4</div>
+        <div class="page pagebtn">5</div>
+        <div class="page pagebtn">6</div>
+        <div class="ellaspe">
+            ···
+        </div>
+        <div class="page pagebtn">40</div>
+        <div class="next pagebtn">下一页</div> -->
+    </div>
+    
+    <!-- 底部区域 -->
+    <footer class="footer-section">
+        <div class="footer-hd">
+            <div class="banner">
+                <ul class="ft-nav">
+                    <li><a href="./journey.html">旅程</a></li>
+                    <li><a href="javascript:;">酒店</a></li>
+                    <li><a href="javascript:;">机票</a></li>
+                    <li><a href="javascript:;">定制路线</a></li>
+                    <li><a href="javascript:;">游记攻略</a></li>
+                    <li><a href="javascript:;">会员中心</a></li>
+                </ul>
+                <div class="ft-top">
+                    返回顶部
+                    <img src="./images/icon_back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bd">
+            <div class="banner">
+                <div class="footer-msg">
+                    <div class="footer-msg-left">
+                        <div class="footer-msg-notice">
+                            金莲国旅: <br>
+                            对于中国游客而言，以及对于越来越多的世界各地的游客而言， 携程是其可值得信赖的旅行平台，用户可以通过携程的平台进行任何类型的旅行预订，包括从目的地内活动、周末短假及短途旅行，到跨境..
+                        </div>
+                        <div class="footer-msg-contact">
+                            联系我们: <br>
+                            <p>服务热线：020-226231</p>
+                            <p>合作热线：020-115423</p>
+                            <p>联系邮箱：21542512@qq.com</p>
+                            <p>公司地址：广东省广州市天河区龙洞森林公园环山路</p>
+                        </div>
+                    </div>
+                    <div class="footer-msg-right">
+                        <div class="erweicode">
+                            <div class="wechat">
+                                <p>—— 微信客服 ——</p>
+                                <img src="./images/erweicode1.png" alt="">
+                            </div>
+                            <div class="official">
+                                <p>—— 公众号 ——</p>
+                                <img src="./images/erweicode2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobile">咨询电话: <span>020-123456</span> 或 <span>020-326531</span></div>
+                    </div>
+                </div>
+                <ul class="footer-platform">
+                    <li>腾讯开放平台</li>
+                    <li>全球速卖通</li>
+                    <li>腾讯微云</li>
+                    <li>腾讯会议</li>
+                    <li>阿里云计算</li>
+                    <li>腾讯优图</li>
+                    <li>大麦网</li>
+                    <li>腾讯文档</li>
+                    <li>阿里巴巴集团</li>
+                    <li>腾讯企点</li>
+                    <li>网商银行</li>
+                    <li>阿里妈妈</li>
+                    <li>阿里通信</li>
+                    <li>阿里影业</li>
+                    <li>阿里健康</li>
+                    <li>阿里安全</li>
+                </ul>
+                <div class="footer-record">
+                    浙ICP备2012000356号-3
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入jquery js -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- 引入公共 js -->
+    <script src="./js/common.js"></script>
+    <script src="./js/pagenation.js"></script>
+</body>
+
+</html>
